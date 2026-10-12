@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://harelkleiner.github.io/maya-kleiner/sitemap.xml
