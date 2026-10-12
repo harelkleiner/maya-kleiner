@@ -516,6 +516,6 @@ main:focus { outline: none; }
 
 /* Keep the card's button and title clear of the floating navigator on narrower screens. */
 @media (max-width: 1000px) {
-  .panel-cta { inset-block-end: calc(max(1rem, env(safe-area-inset-bottom)) + 4.5rem); }
-  .panel-title { inset-block-end: calc(max(1rem, env(safe-area-inset-bottom)) + 9rem); }
+  .panel-cta { inset-block-end: calc(max(1rem, env(safe-area-inset-bottom)) + 5.5rem); }
+  .panel-title { inset-block-end: calc(max(1rem, env(safe-area-inset-bottom)) + 10rem); }
 }
