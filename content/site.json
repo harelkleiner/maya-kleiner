@@ -7,14 +7,17 @@
     "linkedin": "",
     "phone": ""
   },
-
   "ui": {
     "en": {
       "lang": "en",
       "dir": "ltr",
       "title": "Maya Kleiner — Designer & Photographer",
       "description": "Portfolio of Maya Kleiner, designer and photographer: branding, typography, book design, UX/UI, illustration and photography.",
-      "roles": ["Designer", "Photographer", "Graphic & Brand Design"],
+      "roles": [
+        "Designer",
+        "Photographer",
+        "Graphic & Brand Design"
+      ],
       "nav_projects": "Projects",
       "nav_about": "About me",
       "nav_contact": "Contact",
@@ -44,14 +47,19 @@
       "rights": "All rights reserved.",
       "not_found_title": "Page not found",
       "not_found_text": "The page you are looking for doesn't exist.",
-      "not_found_link": "Back to the home page"
+      "not_found_link": "Back to the home page",
+      "sound": "Sound"
     },
     "he": {
       "lang": "he",
       "dir": "rtl",
       "title": "מאיה קליינר — מעצבת וצלמת",
       "description": "תיק העבודות של מאיה קליינר, מעצבת וצלמת: מיתוג, טיפוגרפיה, עיצוב ספרים, חוויית משתמש, איור וצילום.",
-      "roles": ["מעצבת", "צלמת", "עיצוב גרפי ומיתוג"],
+      "roles": [
+        "מעצבת",
+        "צלמת",
+        "עיצוב גרפי ומיתוג"
+      ],
       "nav_projects": "פרויקטים",
       "nav_about": "קצת עליי",
       "nav_contact": "יצירת קשר",
@@ -81,262 +89,876 @@
       "rights": "כל הזכויות שמורות.",
       "not_found_title": "העמוד לא נמצא",
       "not_found_text": "העמוד שחיפשת לא קיים.",
-      "not_found_link": "חזרה לעמוד הבית"
+      "not_found_link": "חזרה לעמוד הבית",
+      "sound": "שמע"
     }
   },
-
   "collage": [
-    { "image": "ill-vinyl", "project": "illustration", "slot": "a" },
-    { "image": "cob-tickets", "project": "co-blanche", "slot": "b" },
-    { "image": "vin-igloo", "project": "vintage-collage", "slot": "c" },
-    { "image": "spin-poster", "project": "spin-90", "slot": "d" },
-    { "image": "moon-phones-2", "project": "moon", "slot": "e" }
+    {
+      "image": "ill-vinyl",
+      "project": "illustration",
+      "slot": "a"
+    },
+    {
+      "image": "cob-tickets",
+      "project": "co-blanche",
+      "slot": "b"
+    },
+    {
+      "image": "vin-igloo",
+      "project": "vintage-collage",
+      "slot": "c"
+    },
+    {
+      "image": "spin-poster",
+      "project": "spin-90",
+      "slot": "d"
+    },
+    {
+      "image": "moon-phones-2",
+      "project": "moon",
+      "slot": "e"
+    }
   ],
-
   "projects": [
     {
       "slug": "co-blanche",
       "title": "CO BLANCHE",
       "theme": "light",
-      "category": { "en": "Branding", "he": "מיתוג" },
+      "category": {
+        "en": "Branding",
+        "he": "מיתוג"
+      },
       "cover": "cob-exhibition",
       "description": {
         "en": "Branding for a phototherapy festival that helps trauma victims open a new page and create through therapeutic photography. The brand name is created from the words CO + BLANCO, which together create a new and clean collaborative space (white).",
         "he": "מיתוג לפסטיבל פוטותרפיה המסייע לנפגעי טראומה לפתוח דף חדש וליצור באמצעות צילום טיפולי. שם המותג נוצר מהמילים CO + BLANCO, שיחד יוצרות מרחב שיתופי חדש ונקי (לבן)."
       },
       "gallery": [
-        { "type": "full", "images": ["cob-sea"], "crop": "16 / 9" },
-        { "type": "narrow", "images": ["cob-logo"] },
-        { "type": "full", "images": ["cob-exhibition"] },
-        { "type": "full", "images": ["cob-banner"] },
-        { "type": "full", "images": ["cob-tote"] },
-        { "type": "narrow", "images": ["cob-tickets"] },
-        { "type": "full", "images": ["cob-strip"] }
+        {
+          "type": "full",
+          "images": [
+            "cob-sea"
+          ],
+          "crop": "16 / 9"
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "cob-logo"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "cob-exhibition"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "cob-banner"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "cob-tote"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "cob-tickets"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "cob-strip"
+          ]
+        }
       ]
     },
     {
       "slug": "spin-90",
       "title": "SPIN 90",
       "theme": "dark",
-      "category": { "en": "Experimental Typography", "he": "טיפוגרפיה ניסיונית" },
+      "category": {
+        "en": "Experimental Typography",
+        "he": "טיפוגרפיה ניסיונית"
+      },
       "cover": "spin-poster",
       "description": {
         "en": "The project shows every letter of the Hebrew alphabet rotating around a fixed axis, at a uniform speed and the same 90-degree angle. The rotation effect was tested on the typefaces Haim, Frank-Ruhl and Miriam. Each letter changed form through the movement, losing its familiar shape and becoming an abstract, illegible image. The aim of the project was to explore the limits of legibility, and to examine how formal movement turns a letter from a familiar symbol into a visual object.",
         "he": "הפרויקט מציג מופעים של סיבובי כל אותיות הא״ב סביב ציר קבוע, במהירות אחידה ובזווית זהה של 90 מעלות. האפקט הסיבובי נבדק על הגופנים חיים, פרנק-ריהל ומרים. כל אות עברה שינוי צורני בעקבות התנועה, איבדה את צורתה המוכרת והפכה לדימוי מופשט ולא קריא. מטרת הפרויקט הייתה לחקור את גבולות הקריאות, ולבדוק כיצד תנועה צורנית משנה את האות מסמל מוכר לאובייקט חזותי."
       },
       "gallery": [
-        { "type": "narrow", "images": ["spin-poster"] },
-        { "type": "trio", "images": ["spin-grid-1", "spin-grid-2", "spin-grid-3"] },
-        { "type": "full", "images": ["spin-print"] }
+        {
+          "type": "narrow",
+          "images": [
+            "spin-poster"
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "spin-grid-1",
+            "spin-grid-2",
+            "spin-grid-3"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "spin-print"
+          ]
+        },
+        {
+          "type": "video",
+          "src": "spin-letters",
+          "poster": "spin-letters.jpg",
+          "width": 1920,
+          "height": 1080,
+          "layout": "full",
+          "label": {
+            "en": "Animation: Hebrew letters rotating 90 degrees around a fixed axis and turning into abstract shapes",
+            "he": "אנימציה: אותיות עבריות מסתובבות 90 מעלות סביב ציר קבוע והופכות לצורות מופשטות"
+          }
+        }
       ]
     },
     {
       "slug": "vintage-collage",
       "title": "VINTAGE COLLAGE",
       "theme": "light",
-      "category": { "en": "Craft Art", "he": "אמנות קולאז'" },
+      "category": {
+        "en": "Craft Art",
+        "he": "אמנות קולאז'"
+      },
       "cover": "vin-igloo",
       "description": {
         "en": "My collage work draws on imagery from 1950s and 1960s advertisements, reassembling vintage elements into playful and surreal compositions. By placing familiar figures and objects in unexpected contexts, I create humorous, dreamlike scenes that blend nostalgia with imagination.",
         "he": "עבודות הקולאז' שלי שואבות מדימויים של פרסומות משנות ה-50 וה-60, ומרכיבות מחדש אלמנטים וינטג'יים לקומפוזיציות שובבות וסוריאליסטיות. בהצבת דמויות וחפצים מוכרים בהקשרים לא צפויים, אני יוצרת סצנות הומוריסטיות וחלומיות שמשלבות נוסטלגיה ודמיון."
       },
       "gallery": [
-        { "type": "pair", "images": ["vin-igloo", "vin-hill"] },
-        { "type": "pair", "images": ["vin-beach", "vin-court"] },
-        { "type": "narrow", "images": ["vin-tomato"] },
-        { "type": "full", "images": ["vin-swing"] },
-        { "type": "full", "images": ["vin-room"] },
-        { "type": "narrow", "images": ["vin-street"] }
+        {
+          "type": "pair",
+          "images": [
+            "vin-igloo",
+            "vin-hill"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "vin-beach",
+            "vin-court"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "vin-tomato"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "vin-swing"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "vin-room"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "vin-street"
+          ]
+        }
       ]
     },
     {
       "slug": "moon",
       "title": "MOON APP",
       "theme": "dark",
-      "category": { "en": "UX & UI", "he": "UX & UI" },
+      "category": {
+        "en": "UX & UI",
+        "he": "UX & UI"
+      },
       "cover": "moon-phones-1",
       "description": {
         "en": "Design for a dance conference taking place in space, combining the world of movement with a futuristic aesthetic. The interface presents information about performances, artists and schedules in a dynamic and intuitive way, using a visual language inspired by motion and floating.",
         "he": "עיצוב לכנס מחול המתקיים בחלל, המשלב את עולם התנועה עם אסתטיקה עתידנית. הממשק מציג מידע על מופעים, אמנים ולוחות זמנים בצורה דינמית ואינטואיטיבית, בשפה חזותית בהשראת תנועה וריחוף."
       },
       "gallery": [
-        { "type": "full", "images": ["moon-web"] },
-        { "type": "full", "images": ["moon-phones-1"] },
-        { "type": "full", "images": ["moon-phones-2"] }
+        {
+          "type": "video",
+          "src": "moon-web",
+          "poster": "moon-web.jpg",
+          "width": 1280,
+          "height": 592,
+          "layout": "full",
+          "label": {
+            "en": "Screen recording of the MOON website: a starry opening, dancers, a spinning Earth and ticket details",
+            "he": "הקלטת מסך של אתר MOON: פתיח זרוע כוכבים, רקדנים, כדור הארץ מסתובב ופרטי כרטיסים"
+          }
+        },
+        {
+          "type": "full",
+          "images": [
+            "moon-phones-1"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "moon-phones-2"
+          ]
+        }
       ]
     },
     {
       "slug": "fringe",
       "title": "FRINGE",
       "theme": "dark",
-      "category": { "en": "Branding & Typography", "he": "מיתוג וטיפוגרפיה" },
+      "category": {
+        "en": "Branding & Typography",
+        "he": "מיתוג וטיפוגרפיה"
+      },
       "cover": "fringe-billboard",
       "description": {
         "en": "This branding project was developed in collaboration with Expo Tel Aviv to mark its 100th anniversary, focusing on the artistic world of fringe theatre. The project aims to translate the spirit of fringe performance (experimental, free and at times unpredictable) into a contemporary visual language. Through expressive typography, dynamic compositions and strong contrasts, the branding reflects the tension between structure and rebellion, and between a long-standing cultural tradition and innovative stage creation.",
         "he": "פרויקט מיתוג שפותח בשיתוף אקספו תל אביב לציון 100 שנה, ומתמקד בעולם האמנותי של תיאטרון הפרינג'. הפרויקט מבקש לתרגם את רוח מופעי הפרינג' (ניסיוניים, חופשיים ולעיתים בלתי צפויים) לשפה חזותית עכשווית. באמצעות טיפוגרפיה אקספרסיבית, קומפוזיציות דינמיות וניגודיות חזקה, המיתוג משקף את המתח שבין מבנה למרד, ובין מסורת תרבותית ארוכת שנים ליצירה בימתית חדשנית."
       },
       "gallery": [
-        { "type": "full", "images": ["fringe-logo"] },
-        { "type": "full", "images": ["fringe-sticker"] },
-        { "type": "full", "images": ["fringe-billboard"] },
-        { "type": "full", "images": ["fringe-web"] },
-        { "type": "narrow", "images": ["fringe-poster"] },
-        { "type": "narrow", "images": ["fringe-mark"] }
+        {
+          "type": "video",
+          "src": "fringe-logo",
+          "poster": "fringe-logo.jpg",
+          "width": 1920,
+          "height": 1080,
+          "layout": "full",
+          "label": {
+            "en": "Animated FRINGE logo: the Hebrew, English and Arabic letters stretch and morph",
+            "he": "לוגו FRINGE מונפש: האותיות בעברית, באנגלית ובערבית נמתחות ומשנות צורה"
+          }
+        },
+        {
+          "type": "full",
+          "images": [
+            "fringe-sticker"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "fringe-billboard"
+          ]
+        },
+        {
+          "type": "video",
+          "src": "fringe-web",
+          "poster": "fringe-web.jpg",
+          "width": 1268,
+          "height": 672,
+          "layout": "full",
+          "label": {
+            "en": "Screen recording of the FRINGE festival website: the fragmented title, performers and the show schedule",
+            "he": "הקלטת מסך של אתר פסטיבל FRINGE: הכותרת המפורקת, המופיעים ולוח ההופעות"
+          }
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "fringe-poster"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "fringe-mark"
+          ]
+        }
       ]
     },
     {
       "slug": "memory",
       "title": "MEMORY ///",
       "theme": "light",
-      "category": { "en": "Book Design", "he": "עיצוב ספר" },
+      "category": {
+        "en": "Book Design",
+        "he": "עיצוב ספר"
+      },
       "cover": "mem-cover",
       "description": {
         "en": "The book explores the changing nature of memories and the way they fade over time. Through visual and typographic language, the project reflects how memories gradually wear down, disappear, or remain only as fragmented moments. The design mirrors the process of remembering, where some details stay sharp while others blur and slowly dissolve.",
         "he": "הספר חוקר את טבעם המשתנה של זיכרונות ואת האופן שבו הם דוהים עם הזמן. באמצעות שפה חזותית וטיפוגרפית, הפרויקט משקף כיצד זיכרונות נשחקים בהדרגה, נעלמים או נותרים רק כרגעים מקוטעים. העיצוב מהדהד את תהליך ההיזכרות: חלק מהפרטים נשארים חדים, בעוד אחרים מיטשטשים ומתמוססים לאט."
       },
       "gallery": [
-        { "type": "full", "images": ["mem-figure"] },
-        { "type": "full", "images": ["mem-cover"] },
-        { "type": "full", "images": ["mem-spread-1"] },
-        { "type": "pair", "images": ["mem-spread-2", "mem-spread-3"] }
+        {
+          "type": "video",
+          "src": "mem-book",
+          "poster": "mem-book.jpg",
+          "width": 1280,
+          "height": 960,
+          "layout": "full",
+          "label": {
+            "en": "Animated flip through the MEMORY book: faded family photographs dissolving into white pages",
+            "he": "דפדוף מונפש בספר MEMORY: תצלומים משפחתיים דהויים שמתמוססים אל דפים לבנים"
+          }
+        },
+        {
+          "type": "full",
+          "images": [
+            "mem-cover"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "mem-spread-1"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "mem-spread-2",
+            "mem-spread-3"
+          ]
+        }
       ]
     },
     {
       "slug": "nay",
       "title": "NAY",
       "theme": "light",
-      "category": { "en": "Brand Creation", "he": "יצירת מותג" },
+      "category": {
+        "en": "Brand Creation",
+        "he": "יצירת מותג"
+      },
       "cover": "nay-duo",
       "description": {
         "en": "This project presents the development of a brand for bags and bowls made from plastic and discarded bags that were collected as waste and transformed through a process of reuse and material experimentation. The brand functions as an experimental lab that emphasizes sustainability, environmental awareness, and a design approach that views waste as a starting point for creativity and innovation.",
         "he": "הפרויקט מציג פיתוח של מותג לתיקים וקערות העשויים מפלסטיק ומשקיות שנאספו כפסולת ועברו תהליך של שימוש חוזר וניסוי בחומר. המותג פועל כמעבדה ניסיונית שמדגישה קיימות, מודעות סביבתית וגישה עיצובית שרואה בפסולת נקודת מוצא ליצירתיות ולחדשנות."
       },
       "gallery": [
-        { "type": "video", "src": "nay-poster", "poster": "nay-poster.jpg", "width": 1080, "height": 1920, "label": { "en": "Animated NAY poster: woven bags with product labels appear one after another under the line Wasting is a Waste", "he": "פוסטר NAY מונפש: תיקים קלועים עם תוויות מוצר מתחלפים זה אחר זה מעל הכיתוב Wasting is a Waste" } },
-        { "type": "narrow", "images": ["nay-sitting"] },
-        { "type": "narrow", "images": ["nay-blue"] },
-        { "type": "pair", "images": ["nay-twirl", "nay-crates"] },
-        { "type": "pair", "images": ["nay-duo", "nay-hand"] },
-        { "type": "pair", "images": ["nay-squat", "nay-carry"] },
-        { "type": "full", "images": ["nay-table"] },
-        { "type": "pair", "images": ["nay-poster", "nay-booklet"] },
-        { "type": "narrow", "images": ["nay-stack"] }
+        {
+          "type": "narrow",
+          "images": [
+            "nay-sitting"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "nay-blue"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "nay-twirl",
+            "nay-crates"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "nay-duo",
+            "nay-hand"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "nay-squat",
+            "nay-carry"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "nay-table"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "nay-booklet"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "nay-stack"
+          ]
+        },
+        {
+          "type": "video",
+          "src": "nay-poster",
+          "poster": "nay-poster.jpg",
+          "width": 1080,
+          "height": 1920,
+          "layout": "narrow",
+          "label": {
+            "en": "Animated NAY poster: woven bags with product labels appear one after another under the line Wasting is a Waste",
+            "he": "פוסטר NAY מונפש: תיקים קלועים עם תוויות מוצר מתחלפים זה אחר זה מעל הכיתוב Wasting is a Waste"
+          },
+          "audio": true
+        }
       ]
     },
     {
       "slug": "illustration",
       "title": "ILLUSTRATION",
       "theme": "light",
-      "category": { "en": "Illustration", "he": "איור" },
+      "category": {
+        "en": "Illustration",
+        "he": "איור"
+      },
       "cover": "ill-synth",
-      "description": { "en": "", "he": "" },
+      "description": {
+        "en": "",
+        "he": ""
+      },
       "gallery": [
-        { "type": "pair", "images": ["ill-portrait", "ill-drawing"] },
-        { "type": "pair", "images": ["ill-synth", "ill-building"] },
-        { "type": "pair", "images": ["ill-cones", "ill-poster"] },
-        { "type": "full", "images": ["ill-vinyl"] },
-        { "type": "full", "images": ["ill-404"] },
-        { "type": "narrow", "images": ["ill-app"] }
+        {
+          "type": "pair",
+          "images": [
+            "ill-portrait",
+            "ill-drawing"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ill-synth",
+            "ill-building"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ill-cones",
+            "ill-poster"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ill-vinyl"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ill-404"
+          ]
+        },
+        {
+          "type": "narrow",
+          "images": [
+            "ill-app"
+          ]
+        }
       ]
     },
     {
       "slug": "photography",
       "title": "PHOTOGRAPHY",
       "theme": "light",
-      "category": { "en": "Photography", "he": "צילום" },
+      "category": {
+        "en": "Photography",
+        "he": "צילום"
+      },
       "cover": "ph-ramen",
-      "description": { "en": "", "he": "" },
+      "description": {
+        "en": "",
+        "he": ""
+      },
       "gallery": [
-        { "type": "pair", "images": ["ph-street", "ph-sea"] },
-        { "type": "pair", "images": ["ph-dune", "ph-kimono"] },
-        { "type": "full", "images": ["ph-ginkgo"] },
-        { "type": "pair", "images": ["ph-girls", "ph-scooters"] },
-        { "type": "pair", "images": ["ph-smoke", "ph-stroller"] },
-        { "type": "full", "images": ["ph-shrine"] },
-        { "type": "pair", "images": ["ph-beach", "ph-ramen"] },
-        { "type": "full", "images": ["ph-fuji"] },
-        { "type": "pair", "images": ["ph-pagoda", "ph-boy"] },
-        { "type": "full", "images": ["ph-arcade"] },
-        { "type": "full", "images": ["ph-mirror"] },
-        { "type": "full", "images": ["ph-arch"] }
+        {
+          "type": "pair",
+          "images": [
+            "ph-street",
+            "ph-sea"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ph-dune",
+            "ph-kimono"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-ginkgo"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ph-girls",
+            "ph-scooters"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ph-smoke",
+            "ph-stroller"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-shrine"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ph-beach",
+            "ph-ramen"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-fuji"
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "ph-pagoda",
+            "ph-boy"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-arcade"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-mirror"
+          ]
+        },
+        {
+          "type": "full",
+          "images": [
+            "ph-arch"
+          ]
+        }
       ]
     }
   ],
-
   "alt": {
-    "home-stars": { "en": "", "he": "" },
-    "cob-sea": { "en": "Soft waves washing over a pale sandy shore", "he": "גלים רכים שוטפים חוף חול בהיר" },
-    "cob-logo": { "en": "CO BLANCHE FESTIVAL logotype in black handwritten-style letters", "he": "הלוגו CO BLANCHE FESTIVAL באותיות שחורות בסגנון כתב יד" },
-    "cob-exhibition": { "en": "Exhibition hall with a large white wall bearing the CO BLANCHE festival logo and dates", "he": "אולם תצוגה עם קיר לבן גדול הנושא את לוגו פסטיבל CO BLANCHE ואת התאריכים" },
-    "cob-banner": { "en": "Hanging black banner with a white circle and the festival logo under a slatted ceiling", "he": "באנר שחור תלוי עם עיגול לבן ולוגו הפסטיבל מתחת לתקרת רפפות" },
-    "cob-tote": { "en": "Person in white trousers and sneakers carrying a white CO BLANCHE tote bag", "he": "אדם במכנסיים לבנים ונעלי ספורט נושא תיק בד לבן של CO BLANCHE" },
-    "cob-tickets": { "en": "Fanned visitor tickets for CO BLANCHE FESTIVAL with blurred black-and-white photographs", "he": "כרטיסי מבקר לפסטיבל CO BLANCHE פרושים במניפה, עם תצלומים מטושטשים בשחור-לבן" },
-    "cob-strip": { "en": "Horizontal visitor ticket strip reading BLANCHE VISITOR", "he": "רצועת כרטיס מבקר אופקית עם הכיתוב BLANCHE VISITOR" },
-    "spin-poster": { "en": "Black poster with a blurred white letter spinning into a ring, framed by thin outlines", "he": "פוסטר שחור עם אות לבנה מטושטשת המסתובבת לכדי טבעת, ממוסגרת בקווי מתאר דקים" },
-    "spin-grid-1": { "en": "Grid of Hebrew letters blurred into spinning circular forms, white on black", "he": "רשת של אותיות עבריות שהיטשטשו לצורות מעגליות מסתובבות, לבן על שחור" },
-    "spin-grid-2": { "en": "Second grid of rotated letterforms in a different typeface, white on black", "he": "רשת שנייה של אותיות מסובבות בגופן אחר, לבן על שחור" },
-    "spin-grid-3": { "en": "Third grid of rotated letterforms in a different typeface, white on black", "he": "רשת שלישית של אותיות מסובבות בגופן אחר, לבן על שחור" },
-    "spin-print": { "en": "Printed sheets of the rotated alphabet lying on a light grey surface", "he": "גיליונות מודפסים של האלפבית המסובב מונחים על משטח אפור בהיר" },
-    "vin-igloo": { "en": "Collage of a vintage girl pouring from a giant bottle onto a snowy igloo with tiny skiers", "he": "קולאז' של ילדה בסגנון וינטג' שופכת מבקבוק ענק על איגלו מושלג עם גולשי סקי זעירים" },
-    "vin-hill": { "en": "Collage of a laughing child's face rising out of a green mountain path, with a lemon slice as the sun", "he": "קולאז' של פני ילדה צוחקת העולים מתוך שביל הררי ירוק, עם פרוסת לימון כשמש" },
-    "vin-beach": { "en": "Collage of a girl eating cereal above a crowded beach with umbrellas", "he": "קולאז' של ילדה אוכלת דגני בוקר מעל חוף הומה עם שמשיות" },
-    "vin-court": { "en": "Collage of a girl in a yellow dress peeking over a tennis court that turns into a snowy forest", "he": "קולאז' של ילדה בשמלה צהובה מציצה מעל מגרש טניס שהופך ליער מושלג" },
-    "vin-tomato": { "en": "Collage of stacked tomatoes and a ketchup bottle on a football field with tiny players", "he": "קולאז' של עגבניות מוערמות ובקבוק קטשופ על מגרש כדורגל עם שחקנים זעירים" },
-    "vin-swing": { "en": "Collage of a girl in red on a seesaw over a green valley, with an eagle and a lemon sun", "he": "קולאז' של ילדה באדום על נדנדה מעל עמק ירוק, עם נשר ושמש-לימון" },
-    "vin-room": { "en": "Collage of a girl vacuuming a living room whose windows open onto a crowded beach", "he": "קולאז' של ילדה שואבת אבק בסלון שחלונותיו נפתחים אל חוף הומה" },
-    "vin-street": { "en": "Collage of a historic street scene with cyclists, blended with modern towers", "he": "קולאז' של רחוב היסטורי עם רוכבי אופניים, משולב במגדלים מודרניים" },
-    "moon-web": { "en": "MOON website hero on a starry black background reading Did you ever dance among million stars?", "he": "עמוד הפתיחה של אתר MOON על רקע שחור זרוע כוכבים, עם הכיתוב Did you ever dance among million stars?" },
-    "moon-phones-1": { "en": "Two smartphones showing the MOON app's dark interface with dancer photos", "he": "שני טלפונים חכמים המציגים את הממשק הכהה של אפליקציית MOON עם תמונות רקדנים" },
-    "moon-phones-2": { "en": "Two smartphones showing MOON app screens with performer cards and a ticket button", "he": "שני טלפונים חכמים עם מסכי אפליקציית MOON, כרטיסי אמנים וכפתור לרכישת כרטיסים" },
-    "fringe-logo": { "en": "FRINGE logotype in distorted white Hebrew, English and Arabic letters on black", "he": "לוגו FRINGE באותיות לבנות מעוותות בעברית, אנגלית וערבית על רקע שחור" },
-    "fringe-sticker": { "en": "Black FRINGE sticker with the dates 11-14.06.26 on a metal grate", "he": "מדבקת FRINGE שחורה עם התאריכים 11-14.06.26 על רשת מתכת" },
-    "fringe-billboard": { "en": "Billboard against a blue sky showing the FRINGE identity and the dates 11-14.06.26", "he": "שלט חוצות על רקע שמיים כחולים עם זהות FRINGE והתאריכים 11-14.06.26" },
-    "fringe-web": { "en": "FRINGE festival website with large fragmented white letters on black", "he": "אתר פסטיבל FRINGE עם אותיות לבנות גדולות ומפורקות על רקע שחור" },
-    "fringe-poster": { "en": "FRINGE poster with the dates 11-14.06.26 in bold white over blurred letterforms", "he": "פוסטר FRINGE עם התאריכים 11-14.06.26 באותיות לבנות בולטות מעל אותיות מטושטשות" },
-    "fringe-mark": { "en": "White winged creature symbol on a black square", "he": "סמל לבן של יצור מכונף על ריבוע שחור" },
-    "mem-figure": { "en": "Cut-out black-and-white figure with red details on a white page", "he": "דמות גזורה בשחור-לבן עם פרטים באדום על דף לבן" },
-    "mem-cover": { "en": "The MEMORY book lying on a grey surface, white cover with a small figure", "he": "הספר MEMORY מונח על משטח אפור, כריכה לבנה עם דמות קטנה" },
-    "mem-spread-1": { "en": "Open book spread with fragmented black, white and red photographic images", "he": "כפולת עמודים פתוחה עם דימויים צילומיים מקוטעים בשחור, לבן ואדום" },
-    "mem-spread-2": { "en": "Open book spread with faded grey images dissolving into white", "he": "כפולת עמודים פתוחה עם דימויים אפורים דהויים המתמוססים אל הלבן" },
-    "mem-spread-3": { "en": "Open book spread printed in black with scattered light fragments", "he": "כפולת עמודים מודפסת בשחור עם שברי אור מפוזרים" },
-    "nay-sitting": { "en": "Girl in white sitting by stacked crates with a black woven NAY bag", "he": "ילדה בלבן יושבת ליד ארגזים מוערמים עם תיק NAY שחור קלוע" },
-    "nay-blue": { "en": "Girl in a blue shirt holding a black woven NAY bag filled with lettuce", "he": "ילדה בחולצה כחולה מחזיקה תיק NAY שחור קלוע מלא בחסה" },
-    "nay-twirl": { "en": "Girl with flying red hair spinning while carrying a small woven bag", "he": "ילדה עם שיער אדום מתעופף מסתובבת עם תיק קלוע קטן" },
-    "nay-crates": { "en": "Colourful woven plastic bowls stacked on plastic crates", "he": "קערות פלסטיק קלועות וצבעוניות מונחות על ארגזי פלסטיק" },
-    "nay-duo": { "en": "Two girls holding colourful woven NAY bags", "he": "שתי ילדות מחזיקות תיקי NAY קלועים וצבעוניים" },
-    "nay-hand": { "en": "Hand holding a white woven net bag with a green melon", "he": "יד מחזיקה תיק רשת לבן קלוע ובו מלון ירוק" },
-    "nay-squat": { "en": "Person crouching on crates of vegetables holding woven bags", "he": "אדם כורע על ארגזי ירקות ומחזיק תיקים קלועים" },
-    "nay-carry": { "en": "Two people in denim carrying woven bags full of greens", "he": "שני אנשים בג'ינס נושאים תיקים קלועים מלאים בירק" },
-    "nay-table": { "en": "Table display of woven NAY bags and bowls with fruit", "he": "תצוגה על שולחן של תיקים וקערות NAY קלועים עם פירות" },
-    "nay-poster": { "en": "White NAY poster with a barcode label reading Wasting is a Waste", "he": "פוסטר NAY לבן עם תווית ברקוד והכיתוב Wasting is a Waste" },
-    "nay-booklet": { "en": "NAY booklet cover with line drawings of a bag and a bottle", "he": "כריכת חוברת NAY עם איורי קו של שקית ובקבוק" },
-    "nay-stack": { "en": "Woven plastic bowls displayed on stacked crates", "he": "קערות פלסטיק קלועות מוצגות על ארגזים מוערמים" },
-    "ill-portrait": { "en": "Painted portrait of a man with a pink face and a yellow shirt", "he": "דיוקן מצויר של גבר עם פנים ורודות וחולצה צהובה" },
-    "ill-drawing": { "en": "Coloured-pencil drawing of a man in a red tie in front of smoking factory chimneys", "he": "ציור בעפרונות צבעוניים של גבר בעניבה אדומה מול ארובות מעשנות" },
-    "ill-synth": { "en": "SYNTH' POP illustration of two cherry characters on a neon grid", "he": "איור SYNTH' POP של שתי דמויות דובדבן על רשת ניאון" },
-    "ill-building": { "en": "Illustration of a man on a scooter in front of a leaning orange building", "he": "איור של גבר על קורקינט מול בניין כתום נטוי" },
-    "ill-cones": { "en": "Illustration of two red traffic cones walking across a zebra crossing", "he": "איור של שני קונוסי תנועה אדומים חוצים מעבר חצייה" },
-    "ill-poster": { "en": "Poster with orange Hebrew lettering beside a blue-haired figure in sunglasses", "he": "פוסטר עם כיתוב עברי כתום לצד דמות עם שיער כחול ומשקפי שמש" },
-    "ill-vinyl": { "en": "Vinyl record and sleeve with wavy blue Hebrew lettering", "he": "תקליט ועטיפה עם כיתוב עברי כחול וגלי" },
-    "ill-404": { "en": "Illustrated 404 page showing a figure sitting among boxes", "he": "עמוד 404 מאויר עם דמות יושבת בין קרטונים" },
-    "ill-app": { "en": "Two phone screens of an app featuring an illustrated orange building", "he": "שני מסכי טלפון של אפליקציה עם איור של בניין כתום" },
-    "ph-street": { "en": "Street photo of a man in a red jacket leaning into a shop doorway", "he": "צילום רחוב של גבר במעיל אדום נשען לתוך פתח חנות" },
-    "ph-sea": { "en": "Two people sitting on a rocky ledge by the sea, with a light leak", "he": "שני אנשים יושבים על מדף סלע מול הים, עם דליפת אור" },
-    "ph-dune": { "en": "Tiny figures on a sand dune below a cliff", "he": "דמויות זעירות על דיונת חול מתחת לצוק" },
-    "ph-kimono": { "en": "Woman in a floral kimono browsing a shop", "he": "אישה בקימונו פרחוני משוטטת בחנות" },
-    "ph-girls": { "en": "Two schoolgirls in uniforms by a wooden fence", "he": "שתי תלמידות במדים ליד גדר עץ" },
-    "ph-scooters": { "en": "Electric scooters parked in a narrow street", "he": "קורקינטים חשמליים חונים ברחוב צר" },
-    "ph-ginkgo": { "en": "Avenue of yellow ginkgo trees with passers-by", "he": "שדרה של עצי גינקו צהובים עם עוברים ושבים" },
-    "ph-smoke": { "en": "Incense smoke rising from a large temple burner", "he": "עשן קטורת עולה ממבער גדול במקדש" },
-    "ph-stroller": { "en": "Dogs riding in a pet stroller under autumn leaves", "he": "כלבים נוסעים בעגלת חיות מתחת לעלי סתיו" },
-    "ph-beach": { "en": "Sunbathers on a crowded pebble beach", "he": "מתרחצים משתזפים על חוף חלוקים צפוף" },
-    "ph-shrine": { "en": "Group of visitors at a red temple gate", "he": "קבוצת מבקרים בשער מקדש אדום" },
-    "ph-ramen": { "en": "Glowing red ramen shop front at night", "he": "חזית מסעדת ראמן אדומה ומוארת בלילה" },
-    "ph-fuji": { "en": "Snow-capped Mount Fuji framed by autumn branches", "he": "הר פוג'י המושלג ממוסגר בענפי סתיו" },
-    "ph-pagoda": { "en": "Busy old street leading to a pagoda", "he": "רחוב עתיק הומה המוביל אל פגודה" },
-    "ph-arcade": { "en": "Two people facing a claw machine in an arcade", "he": "שני אנשים מול מכונת מנוף בארקייד" },
-    "ph-boy": { "en": "Close portrait of a boy in a tank top", "he": "דיוקן קרוב של ילד בגופייה" },
-    "ph-mirror": { "en": "Face reflected in a round mirror in deep red light", "he": "פנים משתקפות במראה עגולה באור אדום עמוק" },
-    "ph-arch": { "en": "Black-and-white photo of a figure walking under curved concrete architecture", "he": "צילום שחור-לבן של דמות הולכת מתחת לאדריכלות בטון מעוגלת" }
+    "home-stars": {
+      "en": "",
+      "he": ""
+    },
+    "cob-sea": {
+      "en": "Soft waves washing over a pale sandy shore",
+      "he": "גלים רכים שוטפים חוף חול בהיר"
+    },
+    "cob-logo": {
+      "en": "CO BLANCHE FESTIVAL logotype in black handwritten-style letters",
+      "he": "הלוגו CO BLANCHE FESTIVAL באותיות שחורות בסגנון כתב יד"
+    },
+    "cob-exhibition": {
+      "en": "Exhibition hall with a large white wall bearing the CO BLANCHE festival logo and dates",
+      "he": "אולם תצוגה עם קיר לבן גדול הנושא את לוגו פסטיבל CO BLANCHE ואת התאריכים"
+    },
+    "cob-banner": {
+      "en": "Hanging black banner with a white circle and the festival logo under a slatted ceiling",
+      "he": "באנר שחור תלוי עם עיגול לבן ולוגו הפסטיבל מתחת לתקרת רפפות"
+    },
+    "cob-tote": {
+      "en": "Person in white trousers and sneakers carrying a white CO BLANCHE tote bag",
+      "he": "אדם במכנסיים לבנים ונעלי ספורט נושא תיק בד לבן של CO BLANCHE"
+    },
+    "cob-tickets": {
+      "en": "Fanned visitor tickets for CO BLANCHE FESTIVAL with blurred black-and-white photographs",
+      "he": "כרטיסי מבקר לפסטיבל CO BLANCHE פרושים במניפה, עם תצלומים מטושטשים בשחור-לבן"
+    },
+    "cob-strip": {
+      "en": "Horizontal visitor ticket strip reading BLANCHE VISITOR",
+      "he": "רצועת כרטיס מבקר אופקית עם הכיתוב BLANCHE VISITOR"
+    },
+    "spin-poster": {
+      "en": "Black poster with a blurred white letter spinning into a ring, framed by thin outlines",
+      "he": "פוסטר שחור עם אות לבנה מטושטשת המסתובבת לכדי טבעת, ממוסגרת בקווי מתאר דקים"
+    },
+    "spin-grid-1": {
+      "en": "Grid of Hebrew letters blurred into spinning circular forms, white on black",
+      "he": "רשת של אותיות עבריות שהיטשטשו לצורות מעגליות מסתובבות, לבן על שחור"
+    },
+    "spin-grid-2": {
+      "en": "Second grid of rotated letterforms in a different typeface, white on black",
+      "he": "רשת שנייה של אותיות מסובבות בגופן אחר, לבן על שחור"
+    },
+    "spin-grid-3": {
+      "en": "Third grid of rotated letterforms in a different typeface, white on black",
+      "he": "רשת שלישית של אותיות מסובבות בגופן אחר, לבן על שחור"
+    },
+    "spin-print": {
+      "en": "Printed sheets of the rotated alphabet lying on a light grey surface",
+      "he": "גיליונות מודפסים של האלפבית המסובב מונחים על משטח אפור בהיר"
+    },
+    "vin-igloo": {
+      "en": "Collage of a vintage girl pouring from a giant bottle onto a snowy igloo with tiny skiers",
+      "he": "קולאז' של ילדה בסגנון וינטג' שופכת מבקבוק ענק על איגלו מושלג עם גולשי סקי זעירים"
+    },
+    "vin-hill": {
+      "en": "Collage of a laughing child's face rising out of a green mountain path, with a lemon slice as the sun",
+      "he": "קולאז' של פני ילדה צוחקת העולים מתוך שביל הררי ירוק, עם פרוסת לימון כשמש"
+    },
+    "vin-beach": {
+      "en": "Collage of a girl eating cereal above a crowded beach with umbrellas",
+      "he": "קולאז' של ילדה אוכלת דגני בוקר מעל חוף הומה עם שמשיות"
+    },
+    "vin-court": {
+      "en": "Collage of a girl in a yellow dress peeking over a tennis court that turns into a snowy forest",
+      "he": "קולאז' של ילדה בשמלה צהובה מציצה מעל מגרש טניס שהופך ליער מושלג"
+    },
+    "vin-tomato": {
+      "en": "Collage of stacked tomatoes and a ketchup bottle on a football field with tiny players",
+      "he": "קולאז' של עגבניות מוערמות ובקבוק קטשופ על מגרש כדורגל עם שחקנים זעירים"
+    },
+    "vin-swing": {
+      "en": "Collage of a girl in red on a seesaw over a green valley, with an eagle and a lemon sun",
+      "he": "קולאז' של ילדה באדום על נדנדה מעל עמק ירוק, עם נשר ושמש-לימון"
+    },
+    "vin-room": {
+      "en": "Collage of a girl vacuuming a living room whose windows open onto a crowded beach",
+      "he": "קולאז' של ילדה שואבת אבק בסלון שחלונותיו נפתחים אל חוף הומה"
+    },
+    "vin-street": {
+      "en": "Collage of a historic street scene with cyclists, blended with modern towers",
+      "he": "קולאז' של רחוב היסטורי עם רוכבי אופניים, משולב במגדלים מודרניים"
+    },
+    "moon-web": {
+      "en": "MOON website hero on a starry black background reading Did you ever dance among million stars?",
+      "he": "עמוד הפתיחה של אתר MOON על רקע שחור זרוע כוכבים, עם הכיתוב Did you ever dance among million stars?"
+    },
+    "moon-phones-1": {
+      "en": "Two smartphones showing the MOON app's dark interface with dancer photos",
+      "he": "שני טלפונים חכמים המציגים את הממשק הכהה של אפליקציית MOON עם תמונות רקדנים"
+    },
+    "moon-phones-2": {
+      "en": "Two smartphones showing MOON app screens with performer cards and a ticket button",
+      "he": "שני טלפונים חכמים עם מסכי אפליקציית MOON, כרטיסי אמנים וכפתור לרכישת כרטיסים"
+    },
+    "fringe-logo": {
+      "en": "FRINGE logotype in distorted white Hebrew, English and Arabic letters on black",
+      "he": "לוגו FRINGE באותיות לבנות מעוותות בעברית, אנגלית וערבית על רקע שחור"
+    },
+    "fringe-sticker": {
+      "en": "Black FRINGE sticker with the dates 11-14.06.26 on a metal grate",
+      "he": "מדבקת FRINGE שחורה עם התאריכים 11-14.06.26 על רשת מתכת"
+    },
+    "fringe-billboard": {
+      "en": "Billboard against a blue sky showing the FRINGE identity and the dates 11-14.06.26",
+      "he": "שלט חוצות על רקע שמיים כחולים עם זהות FRINGE והתאריכים 11-14.06.26"
+    },
+    "fringe-web": {
+      "en": "FRINGE festival website with large fragmented white letters on black",
+      "he": "אתר פסטיבל FRINGE עם אותיות לבנות גדולות ומפורקות על רקע שחור"
+    },
+    "fringe-poster": {
+      "en": "FRINGE poster with the dates 11-14.06.26 in bold white over blurred letterforms",
+      "he": "פוסטר FRINGE עם התאריכים 11-14.06.26 באותיות לבנות בולטות מעל אותיות מטושטשות"
+    },
+    "fringe-mark": {
+      "en": "White winged creature symbol on a black square",
+      "he": "סמל לבן של יצור מכונף על ריבוע שחור"
+    },
+    "mem-figure": {
+      "en": "Cut-out black-and-white figure with red details on a white page",
+      "he": "דמות גזורה בשחור-לבן עם פרטים באדום על דף לבן"
+    },
+    "mem-cover": {
+      "en": "The MEMORY book lying on a grey surface, white cover with a small figure",
+      "he": "הספר MEMORY מונח על משטח אפור, כריכה לבנה עם דמות קטנה"
+    },
+    "mem-spread-1": {
+      "en": "Open book spread with fragmented black, white and red photographic images",
+      "he": "כפולת עמודים פתוחה עם דימויים צילומיים מקוטעים בשחור, לבן ואדום"
+    },
+    "mem-spread-2": {
+      "en": "Open book spread with faded grey images dissolving into white",
+      "he": "כפולת עמודים פתוחה עם דימויים אפורים דהויים המתמוססים אל הלבן"
+    },
+    "mem-spread-3": {
+      "en": "Open book spread printed in black with scattered light fragments",
+      "he": "כפולת עמודים מודפסת בשחור עם שברי אור מפוזרים"
+    },
+    "nay-sitting": {
+      "en": "Girl in white sitting by stacked crates with a black woven NAY bag",
+      "he": "ילדה בלבן יושבת ליד ארגזים מוערמים עם תיק NAY שחור קלוע"
+    },
+    "nay-blue": {
+      "en": "Girl in a blue shirt holding a black woven NAY bag filled with lettuce",
+      "he": "ילדה בחולצה כחולה מחזיקה תיק NAY שחור קלוע מלא בחסה"
+    },
+    "nay-twirl": {
+      "en": "Girl with flying red hair spinning while carrying a small woven bag",
+      "he": "ילדה עם שיער אדום מתעופף מסתובבת עם תיק קלוע קטן"
+    },
+    "nay-crates": {
+      "en": "Colourful woven plastic bowls stacked on plastic crates",
+      "he": "קערות פלסטיק קלועות וצבעוניות מונחות על ארגזי פלסטיק"
+    },
+    "nay-duo": {
+      "en": "Two girls holding colourful woven NAY bags",
+      "he": "שתי ילדות מחזיקות תיקי NAY קלועים וצבעוניים"
+    },
+    "nay-hand": {
+      "en": "Hand holding a white woven net bag with a green melon",
+      "he": "יד מחזיקה תיק רשת לבן קלוע ובו מלון ירוק"
+    },
+    "nay-squat": {
+      "en": "Person crouching on crates of vegetables holding woven bags",
+      "he": "אדם כורע על ארגזי ירקות ומחזיק תיקים קלועים"
+    },
+    "nay-carry": {
+      "en": "Two people in denim carrying woven bags full of greens",
+      "he": "שני אנשים בג'ינס נושאים תיקים קלועים מלאים בירק"
+    },
+    "nay-table": {
+      "en": "Table display of woven NAY bags and bowls with fruit",
+      "he": "תצוגה על שולחן של תיקים וקערות NAY קלועים עם פירות"
+    },
+    "nay-poster": {
+      "en": "White NAY poster with a barcode label reading Wasting is a Waste",
+      "he": "פוסטר NAY לבן עם תווית ברקוד והכיתוב Wasting is a Waste"
+    },
+    "nay-booklet": {
+      "en": "NAY booklet cover with line drawings of a bag and a bottle",
+      "he": "כריכת חוברת NAY עם איורי קו של שקית ובקבוק"
+    },
+    "nay-stack": {
+      "en": "Woven plastic bowls displayed on stacked crates",
+      "he": "קערות פלסטיק קלועות מוצגות על ארגזים מוערמים"
+    },
+    "ill-portrait": {
+      "en": "Painted portrait of a man with a pink face and a yellow shirt",
+      "he": "דיוקן מצויר של גבר עם פנים ורודות וחולצה צהובה"
+    },
+    "ill-drawing": {
+      "en": "Coloured-pencil drawing of a man in a red tie in front of smoking factory chimneys",
+      "he": "ציור בעפרונות צבעוניים של גבר בעניבה אדומה מול ארובות מעשנות"
+    },
+    "ill-synth": {
+      "en": "SYNTH' POP illustration of two cherry characters on a neon grid",
+      "he": "איור SYNTH' POP של שתי דמויות דובדבן על רשת ניאון"
+    },
+    "ill-building": {
+      "en": "Illustration of a man on a scooter in front of a leaning orange building",
+      "he": "איור של גבר על קורקינט מול בניין כתום נטוי"
+    },
+    "ill-cones": {
+      "en": "Illustration of two red traffic cones walking across a zebra crossing",
+      "he": "איור של שני קונוסי תנועה אדומים חוצים מעבר חצייה"
+    },
+    "ill-poster": {
+      "en": "Poster with orange Hebrew lettering beside a blue-haired figure in sunglasses",
+      "he": "פוסטר עם כיתוב עברי כתום לצד דמות עם שיער כחול ומשקפי שמש"
+    },
+    "ill-vinyl": {
+      "en": "Vinyl record and sleeve with wavy blue Hebrew lettering",
+      "he": "תקליט ועטיפה עם כיתוב עברי כחול וגלי"
+    },
+    "ill-404": {
+      "en": "Illustrated 404 page showing a figure sitting among boxes",
+      "he": "עמוד 404 מאויר עם דמות יושבת בין קרטונים"
+    },
+    "ill-app": {
+      "en": "Two phone screens of an app featuring an illustrated orange building",
+      "he": "שני מסכי טלפון של אפליקציה עם איור של בניין כתום"
+    },
+    "ph-street": {
+      "en": "Street photo of a man in a red jacket leaning into a shop doorway",
+      "he": "צילום רחוב של גבר במעיל אדום נשען לתוך פתח חנות"
+    },
+    "ph-sea": {
+      "en": "Two people sitting on a rocky ledge by the sea, with a light leak",
+      "he": "שני אנשים יושבים על מדף סלע מול הים, עם דליפת אור"
+    },
+    "ph-dune": {
+      "en": "Tiny figures on a sand dune below a cliff",
+      "he": "דמויות זעירות על דיונת חול מתחת לצוק"
+    },
+    "ph-kimono": {
+      "en": "Woman in a floral kimono browsing a shop",
+      "he": "אישה בקימונו פרחוני משוטטת בחנות"
+    },
+    "ph-girls": {
+      "en": "Two schoolgirls in uniforms by a wooden fence",
+      "he": "שתי תלמידות במדים ליד גדר עץ"
+    },
+    "ph-scooters": {
+      "en": "Electric scooters parked in a narrow street",
+      "he": "קורקינטים חשמליים חונים ברחוב צר"
+    },
+    "ph-ginkgo": {
+      "en": "Avenue of yellow ginkgo trees with passers-by",
+      "he": "שדרה של עצי גינקו צהובים עם עוברים ושבים"
+    },
+    "ph-smoke": {
+      "en": "Incense smoke rising from a large temple burner",
+      "he": "עשן קטורת עולה ממבער גדול במקדש"
+    },
+    "ph-stroller": {
+      "en": "Dogs riding in a pet stroller under autumn leaves",
+      "he": "כלבים נוסעים בעגלת חיות מתחת לעלי סתיו"
+    },
+    "ph-beach": {
+      "en": "Sunbathers on a crowded pebble beach",
+      "he": "מתרחצים משתזפים על חוף חלוקים צפוף"
+    },
+    "ph-shrine": {
+      "en": "Group of visitors at a red temple gate",
+      "he": "קבוצת מבקרים בשער מקדש אדום"
+    },
+    "ph-ramen": {
+      "en": "Glowing red ramen shop front at night",
+      "he": "חזית מסעדת ראמן אדומה ומוארת בלילה"
+    },
+    "ph-fuji": {
+      "en": "Snow-capped Mount Fuji framed by autumn branches",
+      "he": "הר פוג'י המושלג ממוסגר בענפי סתיו"
+    },
+    "ph-pagoda": {
+      "en": "Busy old street leading to a pagoda",
+      "he": "רחוב עתיק הומה המוביל אל פגודה"
+    },
+    "ph-arcade": {
+      "en": "Two people facing a claw machine in an arcade",
+      "he": "שני אנשים מול מכונת מנוף בארקייד"
+    },
+    "ph-boy": {
+      "en": "Close portrait of a boy in a tank top",
+      "he": "דיוקן קרוב של ילד בגופייה"
+    },
+    "ph-mirror": {
+      "en": "Face reflected in a round mirror in deep red light",
+      "he": "פנים משתקפות במראה עגולה באור אדום עמוק"
+    },
+    "ph-arch": {
+      "en": "Black-and-white photo of a figure walking under curved concrete architecture",
+      "he": "צילום שחור-לבן של דמות הולכת מתחת לאדריכלות בטון מעוגלת"
+    }
   }
 }

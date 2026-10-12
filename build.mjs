@@ -84,7 +84,7 @@ ${site.url ? `<meta property="og:image" content="${abs(`assets/img/${ogImage}-12
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?${fonts}&display=swap">
 <link rel="stylesheet" href="${prefix}assets/css/style.css?v=${ASSET_VERSION}">
 <script>(function(d){d.classList.replace("no-js","js");try{if(!sessionStorage.getItem("mk-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("show-intro");sessionStorage.setItem("mk-intro","1")}}catch(e){}})(document.documentElement)</script>
-<script type="application/json" id="i18n">${JSON.stringify(Object.fromEntries(["close", "prev", "next", "image_of", "play_video", "pause_video", "lightbox_label"].map((k) => [k, t[k]])))}</script>
+<script type="application/json" id="i18n">${JSON.stringify(Object.fromEntries(["close", "prev", "next", "image_of", "play_video", "pause_video", "lightbox_label", "sound"].map((k) => [k, t[k]])))}</script>
 <script src="${prefix}assets/js/main.js?v=${ASSET_VERSION}" defer></script>
 </head>`;
 }
@@ -187,8 +187,8 @@ function figure(prefix, name, lang, sizesAttr, crop) {
 
 function block(prefix, b, lang) {
   if (b.type === "video") {
-    return `<div class="block block-video block-narrow">
-      <video class="loop-video" src="${prefix}assets/video/${b.src}.mp4" poster="${prefix}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata" aria-label="${esc(b.label[lang])}"></video>
+    return `<div class="block block-video block-${b.layout || "narrow"}">
+      <video class="loop-video" src="${prefix}assets/video/${b.src}.mp4" poster="${prefix}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata"${b.audio ? " data-audio" : ""} aria-label="${esc(b.label[lang])}"></video>
     </div>`;
   }
   const sizesFor = { full: "(min-width: 1200px) 1100px, 100vw", narrow: "(min-width: 900px) 620px, 100vw", pair: "(min-width: 900px) 50vw, 100vw", trio: "(min-width: 900px) 33vw, 100vw" };

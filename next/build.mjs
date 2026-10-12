@@ -332,7 +332,7 @@ function shot(prefix, name, lang, sizesAttr, crop) {
 
 function block(prefix, b, lang) {
   if (b.type === "video") {
-    return `<div class="g g-video"><figure class="shot"><video class="loop" src="${prefix}${MEDIA}assets/video/${b.src}.mp4" poster="${prefix}${MEDIA}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata" aria-label="${esc(b.label[lang])}"></video></figure></div>`;
+    return `<div class="g g-video g-${b.layout || "narrow"}"><figure class="shot"><video class="loop" src="${prefix}${MEDIA}assets/video/${b.src}.mp4" poster="${prefix}${MEDIA}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata"${b.audio ? " data-audio" : ""} aria-label="${esc(b.label[lang])}"></video></figure></div>`;
   }
   const s = { full: "100vw", narrow: "(min-width: 900px) 50vw, 100vw", pair: "(min-width: 900px) 50vw, 100vw", trio: "(min-width: 900px) 33vw, 100vw" }[b.type];
   return `<div class="g g-${b.type}">${b.images.map((n) => shot(prefix, n, lang, s, b.crop)).join("")}</div>`;

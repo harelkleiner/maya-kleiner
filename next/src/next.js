@@ -282,7 +282,8 @@
 
     // Images unmask upward and drift inside their frames.
     $$(".shot").forEach((shot) => {
-      const media = $("img, video", shot);
+      const media = $("img", shot);
+      if (!media) return; // videos reveal themselves when they come into view (setupVideos)
       gsap.to(shot, { clipPath: "inset(0% 0 0 0 round 6px)", duration: 1.4, ease: "expo.out", scrollTrigger: { trigger: shot, start: "top 88%" } });
       gsap.fromTo(media, { scale: 1.35 }, { scale: 1.1, duration: 1.6, ease: "expo.out", scrollTrigger: { trigger: shot, start: "top 88%" } });
       gsap.fromTo(media, { yPercent: -4 }, { yPercent: 4, ease: "none", scrollTrigger: { trigger: shot, start: "top bottom", end: "bottom top", scrub: true } });
@@ -370,23 +371,62 @@
     addEventListener("resize", update);
     update();
   }
+  // Videos play while on screen (unless motion is reduced), each with a pause button,
+  // plus a sound button on videos that have a soundtrack.
   function setupVideos(stillMode) {
+    const he = root.lang === "he";
+    // Watch the block around the video, not the video itself: the video sits inside the
+    // reveal mask, and a masked element never counts as visible.
+    const watcher = !stillMode && "IntersectionObserver" in window
+      ? new IntersectionObserver((entries) => {
+          for (const { target, isIntersecting } of entries) {
+            const video = $("video", target);
+            if (isIntersecting) {
+              $(".shot", target).classList.add("is-open"); // never leave a video behind a closed mask
+              if (!video.dataset.userPaused) video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          }
+        }, { threshold: 0.2 })
+      : null;
     $$("video.loop").forEach((video) => {
+      const shot = video.closest(".shot");
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "vid-toggle";
-      const he = root.lang === "he";
       const sync = () => {
         const playing = !video.paused;
         btn.textContent = playing ? "❚❚" : "▶";
         btn.setAttribute("aria-label", playing ? (he ? "השהיית הווידאו" : "Pause video") : (he ? "הפעלת הווידאו" : "Play video"));
       };
-      btn.addEventListener("click", () => (video.paused ? video.play() : video.pause()));
+      btn.addEventListener("click", () => {
+        if (video.paused) { delete video.dataset.userPaused; video.play(); }
+        else { video.dataset.userPaused = "1"; video.pause(); }
+      });
       video.addEventListener("play", sync);
       video.addEventListener("pause", sync);
-      video.closest(".shot").append(btn);
+      shot.append(btn);
       sync();
-      if (!stillMode) video.play().catch(sync);
+
+      if (video.dataset.audio !== undefined) {
+        const snd = document.createElement("button");
+        snd.type = "button";
+        snd.className = "vid-toggle vid-sound";
+        snd.setAttribute("aria-label", he ? "שמע" : "Sound");
+        const syncSound = () => {
+          snd.textContent = video.muted ? "🔇" : "🔊";
+          snd.setAttribute("aria-pressed", String(!video.muted));
+        };
+        snd.addEventListener("click", () => {
+          video.muted = !video.muted;
+          if (!video.muted && video.paused) { delete video.dataset.userPaused; video.play(); }
+          syncSound();
+        });
+        shot.append(snd);
+        syncSound();
+      }
+      if (watcher) watcher.observe(video.closest(".g"));
     });
   }
 

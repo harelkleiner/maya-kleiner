@@ -36,12 +36,24 @@
     });
   }
 
-  // Looping videos: autoplay unless the visitor prefers reduced motion; always offer a pause button.
+  // Looping videos: play while on screen (unless the visitor prefers reduced motion),
+  // with a pause button on each and a sound button on videos that have a soundtrack.
   const icons = {
     pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>',
     play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>',
+    muted: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" fill="currentColor"/></svg>',
+    sound: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8a5 5 0 0 1 0 8M18.5 5.5a8.5 8.5 0 0 1 0 13" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
   };
-  document.querySelectorAll(".loop-video").forEach((video) => {
+  const videos = [...document.querySelectorAll(".loop-video")];
+  const watcher = !reduceMotion && "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+        for (const { target, isIntersecting } of entries) {
+          if (isIntersecting && !target.dataset.userPaused) target.play().catch(() => {});
+          else if (!isIntersecting) target.pause();
+        }
+      }, { threshold: 0.25 })
+    : null;
+  videos.forEach((video) => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "video-toggle";
@@ -50,12 +62,33 @@
       btn.innerHTML = playing ? icons.pause : icons.play;
       btn.setAttribute("aria-label", playing ? say("pause_video", "Pause video") : say("play_video", "Play video"));
     };
-    btn.addEventListener("click", () => (video.paused ? video.play() : video.pause()));
+    btn.addEventListener("click", () => {
+      if (video.paused) { delete video.dataset.userPaused; video.play(); }
+      else { video.dataset.userPaused = "1"; video.pause(); }
+    });
     video.addEventListener("play", sync);
     video.addEventListener("pause", sync);
     video.after(btn);
     sync();
-    if (!reduceMotion) video.play().catch(sync);
+
+    if (video.dataset.audio !== undefined) {
+      const snd = document.createElement("button");
+      snd.type = "button";
+      snd.className = "video-toggle video-sound";
+      const syncSound = () => {
+        snd.innerHTML = video.muted ? icons.muted : icons.sound;
+        snd.setAttribute("aria-label", say("sound", "Sound"));
+        snd.setAttribute("aria-pressed", String(!video.muted));
+      };
+      snd.addEventListener("click", () => {
+        video.muted = !video.muted;
+        if (!video.muted && video.paused) { delete video.dataset.userPaused; video.play(); }
+        syncSound();
+      });
+      btn.after(snd);
+      syncSound();
+    }
+    if (watcher) watcher.observe(video);
   });
 
   // Lightbox for project images.

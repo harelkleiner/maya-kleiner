@@ -322,7 +322,7 @@ main:focus { outline: none; }
 
 .p-gallery { display: grid; gap: clamp(3rem, 12vh, 9rem); padding: 0 var(--gutter); max-width: 1600px; margin-inline: auto; }
 .g { display: grid; gap: clamp(1rem, 3vw, 3rem); align-items: start; }
-.g-narrow, .g-video { width: min(620px, 100%); margin-inline: auto; }
+.g-narrow { width: min(620px, 100%); margin-inline: auto; }
 .g-pair { grid-template-columns: 1fr 1fr; }
 .g-pair .shot:nth-child(2) { margin-block-start: clamp(3rem, 16vh, 12rem); }
 .g-trio { grid-template-columns: repeat(3, 1fr); }
@@ -336,12 +336,16 @@ main:focus { outline: none; }
 .shot a { display: block; cursor: zoom-in; }
 .shot img, .shot video { width: 100%; will-change: transform; }
 .js:not(.reduced) .shot { clip-path: inset(100% 0 0 0 round 6px); }
+.js .shot.is-open { clip-path: inset(0 0 0 0 round 6px) !important; transition: clip-path 1.2s var(--ease); }
+.js .g-video .shot video { transform: none !important; } /* videos skip the zoom/drift so they always fill their frame */
 .shot { position: relative; }
 .vid-toggle {
   position: absolute; inset-block-end: 1rem; inset-inline-end: 1rem;
   width: 2.75rem; height: 2.75rem; border: 0; border-radius: 50%;
   background: rgba(0, 0, 0, .65); color: #fff; font-size: .8rem; cursor: pointer;
 }
+.vid-sound { inset-inline-end: 4.25rem; font-size: 1rem; }
+.vid-sound[aria-pressed="true"] { background: var(--accent); }
 
 .p-next {
   position: relative; display: grid; place-items: center;
