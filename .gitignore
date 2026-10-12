@@ -1,0 +1,6 @@
+# Original full-resolution Figma exports (large); regenerate WebP with tools/process_images.py
+tools/source/
+.claude/
+node_modules/
+.DS_Store
+Thumbs.db
