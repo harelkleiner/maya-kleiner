@@ -156,6 +156,8 @@ function homeMain(lang) {
     <p class="bio">${esc(t.bio)}</p>
   </section>
 
+  ${featured(prefix, lang)}
+
   <section class="projects" id="projects" aria-labelledby="projects-title">
     <h2 id="projects-title" class="visually-hidden">${esc(t.projects_heading)}</h2>
     <ol class="project-list">
@@ -176,6 +178,27 @@ function homeMain(lang) {
 </main>`;
 }
 
+// The featured project (Maya's final project) gets its own section on the home page.
+function featured(prefix, lang) {
+  const t = ui[lang];
+  const p = projects.find((x) => x.featured);
+  if (!p) return "";
+  const loop = p.gallery.find((b) => b.type === "video");
+  return `<section class="featured" id="final-project" aria-labelledby="featured-title" style="--accent:${p.accent || "#fff"}">
+    <div class="featured-text">
+      <p class="featured-kicker">${esc(t.featured_kicker)}</p>
+      <h2 class="featured-title" id="featured-title" lang="en" dir="ltr">${p.logo ? logoTitle(p) : esc(p.title)}</h2>
+      ${p.tagline ? `<p class="featured-tagline">${esc(p.tagline[lang])}</p>` : ""}
+      <p class="featured-desc">${esc(teaser(p.description[lang]))}</p>
+      <a class="featured-cta" href="${linkTo(prefix, pagePath(lang, p.slug))}">${esc(t.view_project)} <span lang="en" dir="ltr">${esc(p.title)}</span> <span aria-hidden="true">${lang === "he" ? "←" : "→"}</span></a>
+    </div>
+    <div class="featured-media">
+      ${loop ? `<div class="featured-video"><video class="loop-video" src="${prefix}assets/video/${loop.src}.mp4" poster="${prefix}assets/video/${loop.poster}" width="${loop.width}" height="${loop.height}" muted loop playsinline preload="metadata" aria-label="${esc(loop.label[lang])}"></video></div>` : ""}
+      ${img(prefix, p.cover, lang, { cls: "featured-cover", sizesAttr: "(min-width: 900px) 30vw, 60vw" })}
+    </div>
+  </section>`;
+}
+
 // ---------- project ----------
 
 function figure(prefix, name, lang, sizesAttr, crop) {
@@ -185,7 +208,33 @@ function figure(prefix, name, lang, sizesAttr, crop) {
   return `<figure class="shot"><a class="zoom" href="${largest(prefix, name)}" data-lightbox>${styled}<span class="visually-hidden"> (${esc(t.open_image)})</span></a></figure>`;
 }
 
+// A project's logo, inlined so it can take the page's text colour. The heading keeps the plain title for screen readers.
+function logoTitle(p) {
+  const svg = readFileSync(join(OUT, "assets", p.logo), "utf8").trim().replace("<svg ", '<svg aria-hidden="true" focusable="false" ');
+  return `<span class="visually-hidden">${esc(p.title)}</span>${svg}`;
+}
+
+// Short teaser: the first two sentences of a description.
+const teaser = (text) => (text.match(/[^.!?]+[.!?]+/g) || [text]).slice(0, 2).join(" ").trim();
+
 function block(prefix, b, lang) {
+  if (b.type === "text") {
+    return `<section class="block block-text">
+      ${b.kicker ? `<p class="text-kicker">${esc(b.kicker[lang])}</p>` : ""}
+      <h2 class="text-heading">${esc(b.heading[lang])}</h2>
+      ${b.body ? `<p class="text-body">${esc(b.body[lang])}</p>` : ""}
+      ${b.items ? `<ol class="text-items">${b.items.map((it, i) => `<li><span class="text-num" aria-hidden="true">${pad(i + 1)}</span><h3>${esc(it.title[lang])}</h3><p>${esc(it.text[lang])}</p></li>`).join("")}</ol>` : ""}
+    </section>`;
+  }
+  if (b.type === "film") {
+    const t = ui[lang];
+    return `<div class="block block-film block-narrow">
+      <figure class="film">
+        <video class="film-video" src="${prefix}assets/video/${b.src}.mp4" poster="${prefix}assets/video/${b.poster}" width="${b.width}" height="${b.height}" controls playsinline preload="none" aria-label="${esc(b.label[lang])}"></video>
+        <figcaption>${esc(t.watch_film)} <span>· ${esc(t.film_note)}</span></figcaption>
+      </figure>
+    </div>`;
+  }
   if (b.type === "video") {
     return `<div class="block block-video block-${b.layout || "narrow"}">
       <video class="loop-video" src="${prefix}assets/video/${b.src}.mp4" poster="${prefix}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata"${b.audio ? " data-audio" : ""} aria-label="${esc(b.label[lang])}"></video>
@@ -203,7 +252,8 @@ function projectMain(lang, p, i) {
   return (prefix) => `<main id="main" class="project" tabindex="-1">
   <header class="project-head">
     <p class="eyebrow"><span aria-hidden="true">${pad(i + 1)}</span><span>${esc(p.category[lang])}</span></p>
-    <h1 class="project-title" lang="en" dir="ltr">${esc(p.title)}</h1>
+    <h1 class="project-title${p.logo ? " has-logo" : ""}" lang="en" dir="ltr">${p.logo ? logoTitle(p) : esc(p.title)}</h1>
+    ${p.tagline ? `<p class="tagline">${esc(p.tagline[lang])}</p>` : ""}
     ${p.description[lang] ? `<p class="lede">${esc(p.description[lang])}</p>` : ""}
   </header>
   <div class="gallery">

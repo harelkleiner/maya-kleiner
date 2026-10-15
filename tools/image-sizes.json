@@ -628,5 +628,221 @@
    640,
    1080
   ]
+ },
+ "cora-hood": {
+  "w": 1122,
+  "h": 1402,
+  "widths": [
+   640,
+   1122
+  ]
+ },
+ "cora-knot": {
+  "w": 640,
+  "h": 855,
+  "widths": [
+   640
+  ]
+ },
+ "cora-orb": {
+  "w": 244,
+  "h": 379,
+  "widths": [
+   244
+  ]
+ },
+ "cora-brain-front": {
+  "w": 432,
+  "h": 389,
+  "widths": [
+   432
+  ]
+ },
+ "cora-brain-side": {
+  "w": 432,
+  "h": 389,
+  "widths": [
+   432
+  ]
+ },
+ "cora-sketch-1": {
+  "w": 908,
+  "h": 910,
+  "widths": [
+   640,
+   908
+  ]
+ },
+ "cora-sketch-2": {
+  "w": 657,
+  "h": 521,
+  "widths": [
+   640,
+   657
+  ]
+ },
+ "cora-sketch-3": {
+  "w": 907,
+  "h": 757,
+  "widths": [
+   640,
+   907
+  ]
+ },
+ "cora-cocoon-full": {
+  "w": 843,
+  "h": 1471,
+  "widths": [
+   640,
+   843
+  ]
+ },
+ "cora-cocoon-close": {
+  "w": 726,
+  "h": 1254,
+  "widths": [
+   640,
+   726
+  ]
+ },
+ "cora-cocoon-side": {
+  "w": 668,
+  "h": 609,
+  "widths": [
+   640,
+   668
+  ]
+ },
+ "cora-cocoon-back": {
+  "w": 530,
+  "h": 502,
+  "widths": [
+   530
+  ]
+ },
+ "cora-cocoon-rest": {
+  "w": 477,
+  "h": 843,
+  "widths": [
+   477
+  ]
+ },
+ "cora-swaddle-full": {
+  "w": 851,
+  "h": 1536,
+  "widths": [
+   640,
+   851
+  ]
+ },
+ "cora-swaddle-close": {
+  "w": 824,
+  "h": 1426,
+  "widths": [
+   640,
+   824
+  ]
+ },
+ "cora-swaddle-quilt": {
+  "w": 665,
+  "h": 1018,
+  "widths": [
+   640,
+   665
+  ]
+ },
+ "cora-swaddle-open": {
+  "w": 402,
+  "h": 771,
+  "widths": [
+   402
+  ]
+ },
+ "cora-swaddle-sit": {
+  "w": 424,
+  "h": 756,
+  "widths": [
+   424
+  ]
+ },
+ "cora-turgid-full": {
+  "w": 1722,
+  "h": 3044,
+  "widths": [
+   640,
+   1200,
+   1722
+  ]
+ },
+ "cora-turgid-side": {
+  "w": 796,
+  "h": 1485,
+  "widths": [
+   640,
+   796
+  ]
+ },
+ "cora-turgid-front": {
+  "w": 829,
+  "h": 1423,
+  "widths": [
+   640,
+   829
+  ]
+ },
+ "cora-turgid-sit": {
+  "w": 851,
+  "h": 1511,
+  "widths": [
+   640,
+   851
+  ]
+ },
+ "cora-turgid-detail": {
+  "w": 824,
+  "h": 1447,
+  "widths": [
+   640,
+   824
+  ]
+ },
+ "cora-stitch": {
+  "w": 1000,
+  "h": 1492,
+  "widths": [
+   640,
+   1000
+  ]
+ },
+ "cora-group": {
+  "w": 833,
+  "h": 1396,
+  "widths": [
+   640,
+   833
+  ]
+ },
+ "cora-line-1": {
+  "w": 818,
+  "h": 1504,
+  "widths": [
+   640,
+   818
+  ]
+ },
+ "cora-line-2": {
+  "w": 799,
+  "h": 1462,
+  "widths": [
+   640,
+   799
+  ]
+ },
+ "cora-line-3": {
+  "w": 555,
+  "h": 1073,
+  "widths": [
+   555
+  ]
  }
 }

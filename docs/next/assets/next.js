@@ -219,6 +219,21 @@
       onLeaveBack: () => rows.forEach((t) => gsap.to(t, { timeScale: 1, duration: 0.6 })),
     });
 
+    // Final project: a pinned scene where the film opens up and two looks slide in beside it.
+    if ($(".feature")) {
+      gsap.timeline({ scrollTrigger: { trigger: ".feature", start: "top top", end: "+=160%", pin: ".feature-pin", scrub: true } })
+        .to(".feature-media", { clipPath: "inset(0% 0% round 0px)", ease: "none" }, 0)
+        .to(".feature-side-a", { x: 0, rotate: -2, ease: "power2.out" }, 0.15)
+        .to(".feature-side-b", { x: 0, rotate: 2, ease: "power2.out" }, 0.15)
+        .fromTo(".feature-title", { scale: 1.6, yPercent: -10 }, { scale: 1, yPercent: 0, ease: "none" }, 0)
+        .from(".feature-copy", { opacity: 0, y: 40, ease: "power2.out", duration: 0.3 }, 0.55)
+        .to({}, { duration: 1 }, 0);
+      ScrollTrigger.create({
+        trigger: ".feature", start: "top 50%", end: "bottom 50%",
+        onToggle: (self) => self.isActive && root.style.setProperty("--accent", getComputedStyle($(".feature")).getPropertyValue("--accent")),
+      });
+    }
+
     // Work: full-screen project cards stack on top of each other.
     charsRise($(".work-title"), $(".work-head"));
     const items = $$(".stack-item");
@@ -270,6 +285,7 @@
   function project() {
     const title = $(".p-title");
     gsap.from(charsOf(title), { yPercent: 120, rotateX: -80, duration: 1.3, ease: "expo.out", stagger: 0.04, delay: 0.15 });
+    gsap.from(".p-title-logo svg", { yPercent: 40, scale: 0.85, opacity: 0, duration: 1.4, ease: "expo.out", delay: 0.15 });
     gsap.from(".p-meta", { opacity: 0, y: 12, duration: 0.8, delay: 0.5 });
 
     // The cover opens from a framed card to full-bleed as you scroll.
@@ -279,6 +295,13 @@
       .to(title, { yPercent: -40, scale: 0.8, ease: "none" }, 0);
 
     wordsScrub($(".p-lede"));
+    $$(".t-body").forEach(wordsScrub);
+    $$(".g-text").forEach((g) => {
+      gsap.from($$(".t-kicker, .t-heading, .t-items li", g), {
+        opacity: 0, y: 30, duration: 1, ease: "expo.out", stagger: 0.08,
+        scrollTrigger: { trigger: g, start: "top 80%" },
+      });
+    });
 
     // Images unmask upward and drift inside their frames.
     $$(".shot").forEach((shot) => {
@@ -374,6 +397,11 @@
   // Videos play while on screen (unless motion is reduced), each with a pause button,
   // plus a sound button on videos that have a soundtrack.
   function setupVideos(stillMode) {
+    const featureVideo = $(".feature-video");
+    if (featureVideo && !stillMode && "IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => (e.isIntersecting ? featureVideo.play().catch(() => {}) : featureVideo.pause()), { threshold: 0.1 })
+        .observe($(".feature"));
+    }
     const he = root.lang === "he";
     // Watch the block around the video, not the video itself: the video sits inside the
     // reveal mask, and a masked element never counts as visible.

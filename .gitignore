@@ -7,3 +7,8 @@ Thumbs.db
 
 # Local preview build of the experimental design (published copy lives in docs/next/)
 next/dist/
+
+# Original files from Maya (the site uses processed copies in docs/assets)
+WhatsApp*
+content/WhatsApp*
+*.pdf

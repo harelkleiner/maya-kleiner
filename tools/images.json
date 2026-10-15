@@ -220,5 +220,89 @@
  },
  "cob-sea": {
   "hash": "75f9da445d57a0fdacb8030ac186a2be1629d3a1"
+ },
+ "cora-hood": {
+  "hash": "src_cora-hood"
+ },
+ "cora-knot": {
+  "hash": "src_cora-knot"
+ },
+ "cora-orb": {
+  "hash": "src_cora-orb"
+ },
+ "cora-brain-front": {
+  "hash": "src_cora-brain-front"
+ },
+ "cora-brain-side": {
+  "hash": "src_cora-brain-side"
+ },
+ "cora-sketch-1": {
+  "hash": "src_cora-sketch-1"
+ },
+ "cora-sketch-2": {
+  "hash": "src_cora-sketch-2"
+ },
+ "cora-sketch-3": {
+  "hash": "src_cora-sketch-3"
+ },
+ "cora-cocoon-full": {
+  "hash": "src_cora-cocoon-full"
+ },
+ "cora-cocoon-close": {
+  "hash": "src_cora-cocoon-close"
+ },
+ "cora-cocoon-side": {
+  "hash": "src_cora-cocoon-side"
+ },
+ "cora-cocoon-back": {
+  "hash": "src_cora-cocoon-back"
+ },
+ "cora-cocoon-rest": {
+  "hash": "src_cora-cocoon-rest"
+ },
+ "cora-swaddle-full": {
+  "hash": "src_cora-swaddle-full"
+ },
+ "cora-swaddle-close": {
+  "hash": "src_cora-swaddle-close"
+ },
+ "cora-swaddle-quilt": {
+  "hash": "src_cora-swaddle-quilt"
+ },
+ "cora-swaddle-open": {
+  "hash": "src_cora-swaddle-open"
+ },
+ "cora-swaddle-sit": {
+  "hash": "src_cora-swaddle-sit"
+ },
+ "cora-turgid-full": {
+  "hash": "src_cora-turgid-full"
+ },
+ "cora-turgid-side": {
+  "hash": "src_cora-turgid-side"
+ },
+ "cora-turgid-front": {
+  "hash": "src_cora-turgid-front"
+ },
+ "cora-turgid-sit": {
+  "hash": "src_cora-turgid-sit"
+ },
+ "cora-turgid-detail": {
+  "hash": "src_cora-turgid-detail"
+ },
+ "cora-stitch": {
+  "hash": "src_cora-stitch"
+ },
+ "cora-group": {
+  "hash": "src_cora-group"
+ },
+ "cora-line-1": {
+  "hash": "src_cora-line-1"
+ },
+ "cora-line-2": {
+  "hash": "src_cora-line-2"
+ },
+ "cora-line-3": {
+  "hash": "src_cora-line-3"
  }
 }

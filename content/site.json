@@ -48,7 +48,12 @@
       "not_found_title": "Page not found",
       "not_found_text": "The page you are looking for doesn't exist.",
       "not_found_link": "Back to the home page",
-      "sound": "Sound"
+      "sound": "Sound",
+      "final_project": "Final project",
+      "featured_kicker": "Final project 2026",
+      "watch_film": "Full collection film",
+      "film_note": "12 min, with sound",
+      "view_project": "View project"
     },
     "he": {
       "lang": "he",
@@ -90,7 +95,12 @@
       "not_found_title": "העמוד לא נמצא",
       "not_found_text": "העמוד שחיפשת לא קיים.",
       "not_found_link": "חזרה לעמוד הבית",
-      "sound": "שמע"
+      "sound": "שמע",
+      "final_project": "פרויקט גמר",
+      "featured_kicker": "פרויקט גמר 2026",
+      "watch_film": "סרט הקולקציה המלא",
+      "film_note": "12 דקות, עם קול",
+      "view_project": "לפרויקט"
     }
   },
   "collage": [
@@ -121,6 +131,360 @@
     }
   ],
   "projects": [
+    {
+      "slug": "cora",
+      "title": "CORA",
+      "featured": true,
+      "theme": "dark",
+      "category": {
+        "en": "Final Project · Fashion & Brand",
+        "he": "פרויקט גמר · אופנה ומיתוג"
+      },
+      "cover": "cora-hood",
+      "tagline": {
+        "en": "2026 DROP · Incubation brand",
+        "he": "2026 DROP · מותג דגירה"
+      },
+      "description": {
+        "en": "CORA explores the human need for moments of separation, stillness and processing in an overstimulated world. Inspired by the concept of incubation, a state in which the mind keeps processing and creating during rest, the brand creates a personal space between the individual and the outside environment. Through the ideas of protection, pause and reconnection, CORA transforms clothing into a personal cocoon: a soft boundary that lets the body disconnect from external noise and reconnect with the inner self. The brand views isolation not as an escape, but as a necessary condition for transformation, creativity and growth.",
+        "he": "CORA חוקרת את הצורך האנושי ברגעים של ניתוק, שקט ועיבוד בעולם עמוס גירויים. בהשראת מושג הדגירה (אינקובציה), מצב שבו התודעה ממשיכה לעבד וליצור גם בזמן מנוחה, המותג יוצר מרחב אישי בין האדם לסביבה החיצונית. דרך רעיונות של הגנה, עצירה וחיבור מחדש, CORA הופכת את הבגד לפקעת אישית: גבול רך שמאפשר לגוף להתנתק מהרעש החיצוני ולהתחבר מחדש לעצמי הפנימי. המותג רואה בבידוד לא בריחה, אלא תנאי הכרחי לשינוי, ליצירתיות ולצמיחה."
+      },
+      "gallery": [
+        {
+          "type": "video",
+          "src": "cora-loop",
+          "poster": "cora-loop.jpg",
+          "width": 576,
+          "height": 1024,
+          "layout": "narrow",
+          "label": {
+            "en": "The three CORA garments shown on models turning slowly in the studio",
+            "he": "שלושת בגדי CORA על דוגמנים שמסתובבים לאט בסטודיו"
+          }
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "A garment as a personal space",
+            "he": "בגד כמרחב אישי"
+          },
+          "body": {
+            "en": "In this project, I translated this idea into the world of the body and clothing, exploring how a garment can become a personal space: a protective layer that distances the wearer from external noise, overload and stimuli.",
+            "he": "בפרויקט הזה תרגמתי את הרעיון לעולם הגוף והלבוש, וחקרתי כיצד בגד יכול להפוך למרחב אישי: שכבה מגוננת שמרחיקה את הלובש מרעש, מעומס ומגירויים חיצוניים."
+          }
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "What is incubation?",
+            "he": "מהי דגירה?"
+          },
+          "kicker": {
+            "en": "Concept",
+            "he": "קונספט"
+          },
+          "body": {
+            "en": "Incubation describes a cognitive process in which neural networks continue to process and reorganize information during periods of rest, allowing new connections to form and enabling insights, ideas and creative thinking. The concept extends beyond creativity: in biology, the womb and the incubator provide controlled environments that protect and sustain development until the body is ready to emerge. CORA translates this principle into fashion, creating garments that function as temporary protective spaces where external stimulation is reduced and internal transformation can take place.",
+            "he": "דגירה (אינקובציה) היא תהליך קוגניטיבי שבו רשתות עצביות ממשיכות לעבד ולארגן מחדש מידע בזמן מנוחה, וכך נוצרים חיבורים חדשים ומתפתחים תובנות, רעיונות וחשיבה יצירתית. המושג חורג מעבר ליצירתיות: בביולוגיה, הרחם והאינקובטור מספקים סביבה מבוקרת שמגינה על ההתפתחות ומקיימת אותה עד שהגוף מוכן לצאת לעולם. CORA מתרגמת את העיקרון הזה לאופנה ויוצרת בגדים שמתפקדים כמרחבים מגוננים זמניים, שבהם הגירוי החיצוני מצטמצם ושינוי פנימי יכול להתרחש."
+          }
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-knot",
+            "cora-orb"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "The four stages of the creative process",
+            "he": "ארבעת שלבי התהליך היצירתי"
+          },
+          "body": {
+            "en": "Graham Wallas described four stages of the creative process. Incubation is the crucial phase, where ideas develop beneath conscious awareness.",
+            "he": "גרהם וולאס תיאר ארבעה שלבים בתהליך היצירתי. הדגירה היא השלב המכריע, שבו רעיונות מתפתחים מתחת לסף המודעות."
+          },
+          "items": [
+            {
+              "title": {
+                "en": "Preparation",
+                "he": "הכנה"
+              },
+              "text": {
+                "en": "Collecting information.",
+                "he": "איסוף מידע."
+              }
+            },
+            {
+              "title": {
+                "en": "Incubation",
+                "he": "דגירה"
+              },
+              "text": {
+                "en": "Disconnecting externally, processing internally.",
+                "he": "ניתוק כלפי חוץ, עיבוד כלפי פנים."
+              }
+            },
+            {
+              "title": {
+                "en": "Illumination",
+                "he": "הארה"
+              },
+              "text": {
+                "en": "New connections appear.",
+                "he": "חיבורים חדשים מופיעים."
+              }
+            },
+            {
+              "title": {
+                "en": "Verification",
+                "he": "אימות"
+              },
+              "text": {
+                "en": "Bringing the idea into reality.",
+                "he": "הבאת הרעיון אל המציאות."
+              }
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-brain-front",
+            "cora-brain-side"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "The resting brain",
+            "he": "המוח במנוחה"
+          },
+          "body": {
+            "en": "Incubation occurs during periods of rest, when specific brain regions known as the Default Mode Network (DMN) become active.",
+            "he": "הדגירה מתרחשת בזמן מנוחה, כאשר אזורים מסוימים במוח, המכונים \"רשת ברירת המחדל\" (DMN), נעשים פעילים."
+          }
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "Essential conditions for incubation",
+            "he": "תנאים הכרחיים לדגירה"
+          },
+          "kicker": {
+            "en": "Research",
+            "he": "מחקר"
+          },
+          "items": [
+            {
+              "title": {
+                "en": "Psychological distance",
+                "he": "מרחק פסיכולוגי"
+              },
+              "text": {
+                "en": "Stepping away from the problem, so the mind can let go of conscious problem-solving.",
+                "he": "התרחקות מהבעיה, כדי שהתודעה תוכל להרפות מפתרון בעיות מודע."
+              }
+            },
+            {
+              "title": {
+                "en": "Reduced external stimuli",
+                "he": "צמצום גירויים חיצוניים"
+              },
+              "text": {
+                "en": "Minimizing visual, auditory and environmental distractions to make space for internal processing.",
+                "he": "הפחתת הסחות דעת חזותיות, קוליות וסביבתיות כדי לפנות מקום לעיבוד פנימי."
+              }
+            },
+            {
+              "title": {
+                "en": "Rest",
+                "he": "מנוחה"
+              },
+              "text": {
+                "en": "Letting the body and mind relax through stillness, sleep or low-demand activities.",
+                "he": "לאפשר לגוף ולנפש להירגע דרך שקט, שינה או פעילות בעומס נמוך."
+              }
+            },
+            {
+              "title": {
+                "en": "Low stress",
+                "he": "לחץ נמוך"
+              },
+              "text": {
+                "en": "A calm, low-pressure environment that supports relaxation and encourages creative thinking.",
+                "he": "סביבה רגועה ונטולת לחץ שתומכת בהרפיה ומעודדת חשיבה יצירתית."
+              }
+            },
+            {
+              "title": {
+                "en": "Darkness",
+                "he": "חושך"
+              },
+              "text": {
+                "en": "Limiting exposure to light to encourage inward attention and reduce sensory stimulation.",
+                "he": "הגבלת החשיפה לאור כדי לעודד קשב פנימה ולצמצם גירוי חושי."
+              }
+            },
+            {
+              "title": {
+                "en": "Unconscious processing",
+                "he": "עיבוד לא מודע"
+              },
+              "text": {
+                "en": "The brain keeps processing information, forming new connections and generating insights without conscious effort.",
+                "he": "המוח ממשיך לעבד מידע, ליצור חיבורים חדשים ולהפיק תובנות ללא מאמץ מודע."
+              }
+            }
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "cora-sketch-1",
+            "cora-sketch-2",
+            "cora-sketch-3"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "A mobile space",
+            "he": "מרחב נייד"
+          },
+          "kicker": {
+            "en": "The collection",
+            "he": "הקולקציה"
+          },
+          "body": {
+            "en": "The brand translates the cognitive process of incubation into a physical experience. Each piece in the collection is designed as a \"mobile space\" that separates the wearer from overwhelming external stimuli. Through calming weight, a reduced field of vision and black fabric, the garments create a conscious pause for the nervous system. The garment does not only represent the concept; it actively encourages the body to practice it.",
+            "he": "המותג מתרגם את תהליך הדגירה הקוגניטיבי לחוויה פיזית. כל פריט בקולקציה מעוצב כ\"מרחב נייד\" שמפריד בין הלובש לגירויים חיצוניים מציפים. באמצעות משקל מרגיע, שדה ראייה מצומצם ובד שחור, הבגדים יוצרים עצירה מודעת למערכת העצבים. הבגד לא רק מייצג את הרעיון, הוא מעודד את הגוף לתרגל אותו בפועל."
+          }
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "01 / COCOON",
+            "he": "01 / COCOON"
+          },
+          "body": {
+            "en": "Designed to create an external layer that distances the wearer from environmental stimuli, background noise, visual overload and distractions. It functions as a personal incubation space, creating a feeling of inward focus and partial disconnection from the outside world. Through material, form and coverage, the cocoon allows a transition into a mental state where thoughts, ideas and emotions can be processed without external interruption.",
+            "he": "מעוצבת ליצור שכבה חיצונית שמרחיקה את הלובש מגירויים סביבתיים, רעשי רקע, עומס חזותי והסחות דעת. היא מתפקדת כמרחב דגירה אישי, שיוצר תחושה של מיקוד פנימה וניתוק חלקי מהעולם שבחוץ. באמצעות החומר, הצורה והכיסוי, הפקעת מאפשרת מעבר למצב תודעתי שבו מחשבות, רעיונות ורגשות יכולים להתעבד ללא הפרעה מבחוץ."
+          }
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-cocoon-full",
+            "cora-cocoon-close"
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "cora-cocoon-side",
+            "cora-cocoon-back",
+            "cora-cocoon-rest"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "02 / SWADDLE",
+            "he": "02 / SWADDLE"
+          },
+          "body": {
+            "en": "By surrounding the body, the blanket creates a temporary boundary between the inner self and the external environment. It heightens awareness of the body and of touch, shifting attention from the outside world toward the inner self, and translates incubation into a physical experience through the act of wrapping.",
+            "he": "בכך שהיא עוטפת את הגוף, השמיכה יוצרת גבול זמני בין העצמי הפנימי לסביבה החיצונית. היא מחדדת את המודעות לגוף ולמגע, מסיטה את הקשב מהעולם שבחוץ אל העצמי, ומתרגמת את הדגירה לחוויה פיזית דרך פעולת ההתעטפות."
+          }
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-swaddle-full",
+            "cora-swaddle-close"
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "cora-swaddle-quilt",
+            "cora-swaddle-open",
+            "cora-swaddle-sit"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "03 / TURGID",
+            "he": "03 / TURGID"
+          },
+          "body": {
+            "en": "The garment translates incubation through body movement. Its inflated structure creates volume around the arms, reducing their range of motion and slowing the ability to act, reach and react. It forces a shift from a state of doing into a state of being. This physical limitation increases awareness of the body and redirects attention inward, creating space for thoughts and ideas to reorganize.",
+            "he": "הבגד מתרגם את הדגירה דרך תנועת הגוף. המבנה המנופח שלו יוצר נפח סביב הזרועות, מצמצם את טווח התנועה ומאט את היכולת לפעול, להושיט יד ולהגיב. הוא מחייב מעבר ממצב של עשייה למצב של הוויה. המגבלה הפיזית מגבירה את המודעות לגוף ומפנה את הקשב פנימה, ויוצרת מקום למחשבות ולרעיונות להתארגן מחדש."
+          }
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-turgid-full",
+            "cora-turgid-side"
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "cora-turgid-front",
+            "cora-turgid-sit",
+            "cora-turgid-detail"
+          ]
+        },
+        {
+          "type": "text",
+          "heading": {
+            "en": "Material selection",
+            "he": "בחירת חומרים"
+          },
+          "kicker": {
+            "en": "Materials",
+            "he": "חומרים"
+          },
+          "body": {
+            "en": "A restrained material palette defines the collection. Matte black Lycra forms a second skin, while inflated textile creates volume that separates the body from its surroundings. An orange thread runs through as a continuous structural element, marking every seam with a subtle trace of warmth: a visual reminder that beneath stillness, an unseen process is taking place. Together, the materials transform incubation from a mental process into a physical experience.",
+            "he": "פלטת חומרים מאופקת מגדירה את הקולקציה. לייקרה שחורה ומט יוצרת עור שני, ובד מנופח יוצר נפח שמפריד בין הגוף לסביבתו. חוט כתום עובר לאורכה כאלמנט מבני רציף ומסמן כל תפר בעקבה עדינה של חום: תזכורת חזותית לכך שמתחת לשקט מתרחש תהליך סמוי. יחד, החומרים הופכים את הדגירה מתהליך מנטלי לחוויה פיזית."
+          }
+        },
+        {
+          "type": "pair",
+          "images": [
+            "cora-stitch",
+            "cora-group"
+          ]
+        },
+        {
+          "type": "trio",
+          "images": [
+            "cora-line-1",
+            "cora-line-2",
+            "cora-line-3"
+          ]
+        },
+        {
+          "type": "film",
+          "src": "cora-film",
+          "poster": "cora-film.jpg",
+          "width": 576,
+          "height": 1024,
+          "label": {
+            "en": "CORA collection film: models turning slowly to show the three garments from every angle",
+            "he": "סרט הקולקציה CORA: דוגמנים מסתובבים לאט ומציגים את שלושת הבגדים מכל זווית"
+          }
+        }
+      ],
+      "logo": "cora-logo.svg",
+      "accent": "#e0662a"
+    },
     {
       "slug": "co-blanche",
       "title": "CO BLANCHE",
@@ -959,6 +1323,118 @@
     "ph-arch": {
       "en": "Black-and-white photo of a figure walking under curved concrete architecture",
       "he": "צילום שחור-לבן של דמות הולכת מתחת לאדריכלות בטון מעוגלת"
+    },
+    "cora-hood": {
+      "en": "Model wearing the COCOON hood: a padded black sculpture with orange stitching that covers the eyes",
+      "he": "דוגמן עם ברדס COCOON: פסל מרופד שחור עם תפרים כתומים שמכסה את העיניים"
+    },
+    "cora-knot": {
+      "en": "A thick black padded knot lying on the floor",
+      "he": "קשר שחור, עבה ומרופד מונח על הרצפה"
+    },
+    "cora-orb": {
+      "en": "A glowing orange sphere, like an egg or a womb",
+      "he": "כדור כתום זוהר, כמו ביצה או רחם"
+    },
+    "cora-brain-front": {
+      "en": "Brain scan from the front, with active regions highlighted in red",
+      "he": "סריקת מוח מלפנים, עם אזורים פעילים מסומנים באדום"
+    },
+    "cora-brain-side": {
+      "en": "Brain scan from the side, with the Default Mode Network highlighted in red",
+      "he": "סריקת מוח מהצד, עם רשת ברירת המחדל מסומנת באדום"
+    },
+    "cora-sketch-1": {
+      "en": "Black and white study of winding quilted channels",
+      "he": "סקיצה בשחור-לבן של תעלות תפירה מתפתלות"
+    },
+    "cora-sketch-2": {
+      "en": "High-contrast study of an inflated ring-shaped form",
+      "he": "סקיצה בניגודיות גבוהה של צורה מנופחת דמוית טבעת"
+    },
+    "cora-sketch-3": {
+      "en": "High-contrast study of a stacked, padded hood",
+      "he": "סקיצה בניגודיות גבוהה של ברדס מרופד ומרובד"
+    },
+    "cora-cocoon-full": {
+      "en": "Full-body look: black second-skin outfit with the COCOON hood",
+      "he": "לוק מלא: תלבושת שחורה צמודה עם ברדס COCOON"
+    },
+    "cora-cocoon-close": {
+      "en": "Close-up of the COCOON hood covering the eyes",
+      "he": "תקריב של ברדס COCOON שמכסה את העיניים"
+    },
+    "cora-cocoon-side": {
+      "en": "The COCOON hood in profile",
+      "he": "ברדס COCOON בפרופיל"
+    },
+    "cora-cocoon-back": {
+      "en": "The COCOON hood from behind, with an orange seam down the centre",
+      "he": "ברדס COCOON מאחור, עם תפר כתום לאורך המרכז"
+    },
+    "cora-cocoon-rest": {
+      "en": "The hood resting on its side, with only the lips visible",
+      "he": "הברדס מונח על צדו, ורק השפתיים נראות"
+    },
+    "cora-swaddle-full": {
+      "en": "Model wrapped head to toe in the quilted SWADDLE blanket",
+      "he": "דוגמן עטוף מכף רגל ועד ראש בשמיכת SWADDLE המרופדת"
+    },
+    "cora-swaddle-close": {
+      "en": "Close-up of a model wrapped in the SWADDLE up to the face",
+      "he": "תקריב של דוגמנית עטופה ב-SWADDLE עד הפנים"
+    },
+    "cora-swaddle-quilt": {
+      "en": "Detail of the swirling quilted pattern of the SWADDLE",
+      "he": "פרט של דוגמת התפירה המתפתלת של SWADDLE"
+    },
+    "cora-swaddle-open": {
+      "en": "The SWADDLE worn open over the shoulders",
+      "he": "SWADDLE פתוחה על הכתפיים"
+    },
+    "cora-swaddle-sit": {
+      "en": "Model sitting on the floor wrapped in the SWADDLE",
+      "he": "דוגמנית יושבת על הרצפה עטופה ב-SWADDLE"
+    },
+    "cora-turgid-full": {
+      "en": "Full-body look in TURGID, an inflated ring that encircles the arms",
+      "he": "לוק מלא ב-TURGID, טבעת מנופחת שמקיפה את הזרועות"
+    },
+    "cora-turgid-side": {
+      "en": "TURGID from the side, showing its rounded volume",
+      "he": "TURGID מהצד, עם הנפח המעוגל שלו"
+    },
+    "cora-turgid-front": {
+      "en": "TURGID from the front, arms held inside the inflated ring",
+      "he": "TURGID מלפנים, הזרועות בתוך הטבעת המנופחת"
+    },
+    "cora-turgid-sit": {
+      "en": "Model sitting cross-legged in TURGID",
+      "he": "דוגמנית יושבת ברגליים משוכלות ב-TURGID"
+    },
+    "cora-turgid-detail": {
+      "en": "Close-up of TURGID's collar and padded volume",
+      "he": "תקריב של הצווארון והנפח המרופד של TURGID"
+    },
+    "cora-stitch": {
+      "en": "Detail of matte black padding with orange stitching",
+      "he": "פרט של ריפוד שחור ומט עם תפרים כתומים"
+    },
+    "cora-group": {
+      "en": "Three models in the collection against a deep blue sky",
+      "he": "שלושה דוגמנים בבגדי הקולקציה על רקע שמיים כחולים עמוקים"
+    },
+    "cora-line-1": {
+      "en": "Line-up: SWADDLE",
+      "he": "ליין-אפ: SWADDLE"
+    },
+    "cora-line-2": {
+      "en": "Line-up: COCOON",
+      "he": "ליין-אפ: COCOON"
+    },
+    "cora-line-3": {
+      "en": "Line-up: TURGID",
+      "he": "ליין-אפ: TURGID"
     }
   }
 }

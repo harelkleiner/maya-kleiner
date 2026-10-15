@@ -38,6 +38,10 @@ const T = {
     prev_project: "Previous project",
     all_projects: "All projects",
     close: "Close",
+    feature_kicker: "Final project 2026",
+    feature_cta: "Enter the project",
+    film: "Full collection film",
+    film_note: "12 min, with sound",
     marquee: ["Designer", "Photographer", "Branding", "Typography", "Book design", "UX & UI", "Illustration"],
   },
   he: {
@@ -54,12 +58,17 @@ const T = {
     prev_project: "הפרויקט הקודם",
     all_projects: "כל הפרויקטים",
     close: "סגירה",
+    feature_kicker: "פרויקט גמר 2026",
+    feature_cta: "לפרויקט",
+    film: "סרט הקולקציה המלא",
+    film_note: "12 דקות, עם קול",
     marquee: ["מעצבת", "צלמת", "מיתוג", "טיפוגרפיה", "עיצוב ספרים", "UX & UI", "איור"],
   },
 };
 
 // Accent colour per project, picked from the work itself.
 const ACCENT = {
+  cora: "#e0662a",
   "co-blanche": "#e8e3d6",
   "spin-90": "#ffffff",
   "vintage-collage": "#8cc4f0",
@@ -119,6 +128,13 @@ function img(prefix, name, lang, { sizesAttr = "100vw", eager = false, cls = "",
   return `<img${cls ? ` class="${cls}"` : ""}${vt ? ` style="view-transition-name:${vt}"` : ""} src="${prefix}${MEDIA}assets/img/${name}-${mid}.webp" srcset="${set}" sizes="${sizesAttr}" width="${info.w}" height="${info.h}" alt="${esc(a)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 }
 const largest = (prefix, name) => `${prefix}${MEDIA}assets/img/${name}-${sizes[name].widths.at(-1)}.webp`;
+
+// A project's logo, inlined so it takes the surrounding text colour; screen readers get the plain title.
+function logoTitle(p) {
+  const svg = readFileSync(join(ROOT, "docs", "assets", p.logo), "utf8").trim().replace("<svg ", '<svg aria-hidden="true" focusable="false" ');
+  return `<span class="visually-hidden">${esc(p.title)}</span>${svg}`;
+}
+const teaser = (text) => (text.match(/[^.!?]+[.!?]+/g) || [text]).slice(0, 2).join(" ").trim();
 
 // ---------- chrome ----------
 
@@ -288,6 +304,8 @@ function homeMain(lang) {
       .join("\n    ")}
   </div>
 
+  ${feature(prefix, lang)}
+
   <section class="work" id="work" aria-labelledby="work-title">
     <header class="work-head">
       <h2 id="work-title" class="work-title">${splitTitle(n.work, "split")}</h2>
@@ -322,6 +340,31 @@ function homeMain(lang) {
 </main>`;
 }
 
+// Maya's final project gets a full-screen scene of its own on the home page.
+function feature(prefix, lang) {
+  const n = T[lang];
+  const p = projects.find((x) => x.featured);
+  if (!p) return "";
+  const loop = p.gallery.find((b) => b.type === "video");
+  const side = ["cora-swaddle-full", "cora-turgid-full"];
+  return `<section class="feature" id="final-project" aria-labelledby="feature-title" style="--accent:${ACCENT[p.slug]}">
+    <div class="feature-pin">
+      <div class="feature-stage" aria-hidden="true">
+        <div class="feature-side feature-side-a">${img(prefix, side[0], lang, { decorative: true, sizesAttr: "30vw" })}</div>
+        <div class="feature-media">${loop ? `<video class="feature-video" src="${prefix}${MEDIA}assets/video/${loop.src}.mp4" poster="${prefix}${MEDIA}assets/video/${loop.poster}" width="${loop.width}" height="${loop.height}" muted loop playsinline preload="metadata"></video>` : ""}</div>
+        <div class="feature-side feature-side-b">${img(prefix, side[1], lang, { decorative: true, sizesAttr: "30vw" })}</div>
+      </div>
+      <h2 class="feature-title" id="feature-title" lang="en" dir="ltr">${logoTitle(p)}</h2>
+      <div class="feature-copy">
+        <p class="feature-kicker">${esc(n.feature_kicker)}</p>
+        ${p.tagline ? `<p class="feature-tagline">${esc(p.tagline[lang])}</p>` : ""}
+        <p class="feature-desc">${esc(teaser(p.description[lang]))}</p>
+        <a class="feature-cta" href="${linkTo(prefix, pagePath(lang, p.slug))}" data-magnetic>${esc(n.feature_cta)} <span lang="en" dir="ltr">${esc(p.title)}</span> <span aria-hidden="true">${lang === "he" ? "←" : "→"}</span></a>
+      </div>
+    </div>
+  </section>`;
+}
+
 // ---------- project ----------
 
 function shot(prefix, name, lang, sizesAttr, crop) {
@@ -331,6 +374,21 @@ function shot(prefix, name, lang, sizesAttr, crop) {
 }
 
 function block(prefix, b, lang) {
+  if (b.type === "text") {
+    return `<section class="g g-text">
+      ${b.kicker ? `<p class="t-kicker">${esc(b.kicker[lang])}</p>` : ""}
+      <h2 class="t-heading">${esc(b.heading[lang])}</h2>
+      ${b.body ? `<p class="t-body">${words(b.body[lang])}</p>` : ""}
+      ${b.items ? `<ol class="t-items">${b.items.map((it, i) => `<li><span class="t-num" aria-hidden="true">${pad(i + 1)}</span><h3>${esc(it.title[lang])}</h3><p>${esc(it.text[lang])}</p></li>`).join("")}</ol>` : ""}
+    </section>`;
+  }
+  if (b.type === "film") {
+    const n = T[lang];
+    return `<div class="g g-film g-narrow"><figure class="film">
+      <video class="film-video" src="${prefix}${MEDIA}assets/video/${b.src}.mp4" poster="${prefix}${MEDIA}assets/video/${b.poster}" width="${b.width}" height="${b.height}" controls playsinline preload="none" aria-label="${esc(b.label[lang])}"></video>
+      <figcaption>${esc(n.film)} <span>· ${esc(n.film_note)}</span></figcaption>
+    </figure></div>`;
+  }
   if (b.type === "video") {
     return `<div class="g g-video g-${b.layout || "narrow"}"><figure class="shot"><video class="loop" src="${prefix}${MEDIA}assets/video/${b.src}.mp4" poster="${prefix}${MEDIA}assets/video/${b.poster}" width="${b.width}" height="${b.height}" muted loop playsinline preload="metadata"${b.audio ? " data-audio" : ""} aria-label="${esc(b.label[lang])}"></video></figure></div>`;
   }
@@ -345,11 +403,11 @@ function projectMain(lang, p, i) {
   <section class="p-hero">
     <div class="p-hero-pin">
       <p class="p-meta"><span>${pad(i + 1)} / ${pad(projects.length)}</span><span>${esc(p.category[lang])}</span></p>
-      ${splitTitle(p.title, "p-title", "h1", ' lang="en" dir="ltr"')}
+      ${p.logo ? `<h1 class="p-title p-title-logo" lang="en" dir="ltr">${logoTitle(p)}</h1>` : splitTitle(p.title, "p-title", "h1", ' lang="en" dir="ltr"')}
       <div class="p-cover">${img(prefix, p.cover, lang, { eager: true, sizesAttr: "100vw", vt: `cover-${p.slug}` })}</div>
     </div>
   </section>
-  ${p.description[lang] ? `<section class="p-intro"><p class="p-lede">${words(p.description[lang])}</p></section>` : ""}
+  ${p.description[lang] ? `<section class="p-intro">${p.tagline ? `<p class="p-tagline">${esc(p.tagline[lang])}</p>` : ""}<p class="p-lede">${words(p.description[lang])}</p></section>` : ""}
   <section class="p-gallery" aria-label="${esc(p.title)}">
     ${p.gallery.map((b) => block(prefix, b, lang)).join("\n    ")}
   </section>
