@@ -53,7 +53,16 @@
       "featured_kicker": "Final project 2026",
       "watch_film": "Full collection film",
       "film_note": "12 min, with sound",
-      "view_project": "View project"
+      "view_project": "View project",
+      "book_title": "Flip through the catalog",
+      "book_hint": "Drag a page corner, swipe, or use the arrows",
+      "book_label": "CORA catalog, an interactive book. Use the left and right arrow keys to turn the pages.",
+      "book_prev": "Previous page",
+      "book_next": "Next page",
+      "book_cover": "Front cover",
+      "book_back": "Back cover",
+      "book_pages": "Pages {a}–{b} of {n}",
+      "book_page": "Page {a} of {n}"
     },
     "he": {
       "lang": "he",
@@ -100,7 +109,16 @@
       "featured_kicker": "פרויקט גמר 2026",
       "watch_film": "סרט הקולקציה המלא",
       "film_note": "12 דקות, עם קול",
-      "view_project": "לפרויקט"
+      "view_project": "לפרויקט",
+      "book_title": "דפדפו בקטלוג",
+      "book_hint": "גררו את פינת הדף, החליקו או השתמשו בחיצים",
+      "book_label": "קטלוג CORA, ספר אינטראקטיבי. השתמשו במקשי החצים ימינה ושמאלה כדי לדפדף.",
+      "book_prev": "לעמוד הקודם",
+      "book_next": "לעמוד הבא",
+      "book_cover": "כריכה קדמית",
+      "book_back": "כריכה אחורית",
+      "book_pages": "עמודים {a}–{b} מתוך {n}",
+      "book_page": "עמוד {a} מתוך {n}"
     }
   },
   "collage": [
@@ -150,6 +168,84 @@
         "he": "CORA חוקרת את הצורך האנושי ברגעים של ניתוק, שקט ועיבוד בעולם עמוס גירויים. בהשראת מושג הדגירה (אינקובציה), מצב שבו התודעה ממשיכה לעבד וליצור גם בזמן מנוחה, המותג יוצר מרחב אישי בין האדם לסביבה החיצונית. דרך רעיונות של הגנה, עצירה וחיבור מחדש, CORA הופכת את הבגד לפקעת אישית: גבול רך שמאפשר לגוף להתנתק מהרעש החיצוני ולהתחבר מחדש לעצמי הפנימי. המותג רואה בבידוד לא בריחה, אלא תנאי הכרחי לשינוי, ליצירתיות ולצמיחה."
       },
       "gallery": [
+        {
+          "type": "book",
+          "src": "cora",
+          "alts": {
+            "front-cover": {
+              "en": "Front cover: an orange cover with three small photographs of the collection",
+              "he": "כריכה קדמית: כריכה כתומה עם שלושה תצלומים קטנים של הקולקציה"
+            },
+            "inside-front": {
+              "en": "Inside front cover: orange gradient with the line CORA, concept to creation",
+              "he": "צד פנימי של הכריכה הקדמית: מעבר צבע כתום עם הכיתוב CORA, concept to creation"
+            },
+            "inside-back": {
+              "en": "Inside back cover: orange gradient with three small photographs",
+              "he": "צד פנימי של הכריכה האחורית: מעבר צבע כתום עם שלושה תצלומים קטנים"
+            },
+            "back-cover": {
+              "en": "Back cover: orange cover with the line 2026 DROP, incubation brand, CORA concept to creation",
+              "he": "כריכה אחורית: כריכה כתומה עם הכיתוב 2026 DROP, מותג דגירה, CORA concept to creation"
+            },
+            "page-1": {
+              "en": "Opening page with the CORA concept-to-creation title line",
+              "he": "עמוד פתיחה עם שורת הכותרת CORA concept to creation"
+            },
+            "page-6": {
+              "en": "Brain scan seen from the front, with active regions in red",
+              "he": "סריקת מוח מלפנים, עם אזורים פעילים באדום"
+            },
+            "page-12": {
+              "en": "Full-body look: black second-skin outfit with the COCOON hood",
+              "he": "לוק מלא: תלבושת שחורה צמודה עם ברדס COCOON"
+            },
+            "page-14": {
+              "en": "Close-up of the COCOON hood covering the eyes",
+              "he": "תקריב של ברדס COCOON שמכסה את העיניים"
+            },
+            "page-15": {
+              "en": "The COCOON hood in profile and from behind",
+              "he": "ברדס COCOON בפרופיל ומאחור"
+            },
+            "page-17": {
+              "en": "Model wrapped head to toe in the SWADDLE blanket",
+              "he": "דוגמן עטוף מכף רגל ועד ראש בשמיכת SWADDLE"
+            },
+            "page-18": {
+              "en": "Close-up of a model wrapped in the SWADDLE up to the face",
+              "he": "תקריב של דוגמנית עטופה ב-SWADDLE עד הפנים"
+            },
+            "page-19": {
+              "en": "Four photographs of the SWADDLE: quilting detail, worn open, standing and sitting",
+              "he": "ארבעה תצלומים של SWADDLE: פרט תפירה, פתוחה, בעמידה ובישיבה"
+            },
+            "page-20": {
+              "en": "Full-body look in TURGID, an inflated ring around the arms",
+              "he": "לוק מלא ב-TURGID, טבעת מנופחת סביב הזרועות"
+            },
+            "page-22": {
+              "en": "Four photographs of TURGID from different angles",
+              "he": "ארבעה תצלומים של TURGID מזוויות שונות"
+            },
+            "page-23": {
+              "en": "Close-up of TURGID's collar and padded volume",
+              "he": "תקריב של הצווארון והנפח המרופד של TURGID"
+            },
+            "page-26": {
+              "en": "The COCOON hood resting on its side, only the lips visible",
+              "he": "ברדס COCOON מונח על צדו, ורק השפתיים נראות"
+            },
+            "page-27": {
+              "en": "Three models in the collection against a deep blue sky",
+              "he": "שלושה דוגמנים בבגדי הקולקציה על רקע שמיים כחולים"
+            },
+            "page-28": {
+              "en": "Line-up of the three looks: SWADDLE, COCOON and TURGID",
+              "he": "ליין-אפ של שלושת הלוקים: SWADDLE, COCOON ו-TURGID"
+            }
+          }
+        },
         {
           "type": "video",
           "src": "cora-loop",

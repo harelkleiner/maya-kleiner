@@ -7,6 +7,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { bookHTML, hasBook, PAGE_FLIP } from "../tools/book.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = dirname(HERE);
@@ -138,7 +139,7 @@ const teaser = (text) => (text.match(/[^.!?]+[.!?]+/g) || [text]).slice(0, 2).jo
 
 // ---------- chrome ----------
 
-function head({ lang, title, description, prefix, accent = "#f2efe8" }) {
+function head({ lang, title, description, prefix, accent = "#f2efe8", book = false }) {
   const t = ui[lang];
   const fonts =
     lang === "he"
@@ -162,7 +163,10 @@ function head({ lang, title, description, prefix, accent = "#f2efe8" }) {
 <script src="${GSAP}/gsap.min.js" defer></script>
 <script src="${GSAP}/ScrollTrigger.min.js" defer></script>
 <script src="${LENIS}" defer></script>
-<script src="${prefix}assets/next.js?v=${V}" defer></script>
+<script src="${prefix}assets/next.js?v=${V}" defer></script>${book ? `
+<link rel="stylesheet" href="${prefix}${MEDIA}assets/css/flipbook.css?v=${V}">
+<script src="${PAGE_FLIP}" defer></script>
+<script src="${prefix}${MEDIA}assets/js/flipbook.js?v=${V}" defer></script>` : ""}
 </head>`;
 }
 
@@ -246,9 +250,9 @@ function footer({ lang, prefix }) {
 </footer>`;
 }
 
-function page({ lang, path, altPath, title, description, accent, bodyClass, main, current = null }) {
+function page({ lang, path, altPath, title, description, accent, bodyClass, main, current = null, book = false }) {
   const prefix = prefixFor(path);
-  return `${head({ lang, title, description, prefix, accent })}
+  return `${head({ lang, title, description, prefix, accent, book })}
 <body class="${bodyClass}">
 ${header({ lang, prefix, altPath })}
 ${main(prefix)}
@@ -374,6 +378,9 @@ function shot(prefix, name, lang, sizesAttr, crop) {
 }
 
 function block(prefix, b, lang) {
+  if (b.type === "book") {
+    return `<div class="g g-book" data-cursor="${lang === "he" ? "דפדוף" : "Flip"}">${bookHTML({ b, lang, t: ui[lang], assets: prefix + MEDIA + "assets/" })}</div>`;
+  }
   if (b.type === "text") {
     return `<section class="g g-text">
       ${b.kicker ? `<p class="t-kicker">${esc(b.kicker[lang])}</p>` : ""}
@@ -427,6 +434,8 @@ if (!PUBLISH) {
   cpSync(join(ROOT, "docs", "assets", "img"), join(OUT, "assets", "img"), { recursive: true });
   cpSync(join(ROOT, "docs", "assets", "video"), join(OUT, "assets", "video"), { recursive: true });
   cpSync(join(ROOT, "docs", "assets", "favicon.svg"), join(OUT, "assets", "favicon.svg"));
+  cpSync(join(ROOT, "docs", "assets", "book"), join(OUT, "assets", "book"), { recursive: true });
+  for (const f of ["css/flipbook.css", "js/flipbook.js"]) cpSync(join(ROOT, "docs", "assets", f), join(OUT, "assets", f));
 }
 cpSync(join(HERE, "src", "next.css"), join(OUT, "assets", "next.css"));
 cpSync(join(HERE, "src", "next.js"), join(OUT, "assets", "next.js"));
@@ -453,6 +462,7 @@ for (const lang of LANGS) {
         accent: ACCENT[p.slug],
         bodyClass: "project",
         main: projectMain(lang, p, i),
+        book: hasBook(p),
         current: i,
       })
     );

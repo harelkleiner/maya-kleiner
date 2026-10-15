@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { bookHTML, hasBook, PAGE_FLIP } from "./tools/book.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "docs");
@@ -57,7 +58,7 @@ function img(prefix, name, lang, { sizesAttr = "100vw", eager = false, cls = "",
 
 // ---------- shared chrome ----------
 
-function head({ lang, title, description, prefix, path, altPath, theme, ogImage }) {
+function head({ lang, title, description, prefix, path, altPath, theme, ogImage, book = false }) {
   const t = ui[lang];
   const other = lang === "en" ? "he" : "en";
   const fonts =
@@ -85,7 +86,10 @@ ${site.url ? `<meta property="og:image" content="${abs(`assets/img/${ogImage}-12
 <link rel="stylesheet" href="${prefix}assets/css/style.css?v=${ASSET_VERSION}">
 <script>(function(d){d.classList.replace("no-js","js");try{if(!sessionStorage.getItem("mk-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("show-intro");sessionStorage.setItem("mk-intro","1")}}catch(e){}})(document.documentElement)</script>
 <script type="application/json" id="i18n">${JSON.stringify(Object.fromEntries(["close", "prev", "next", "image_of", "play_video", "pause_video", "lightbox_label", "sound"].map((k) => [k, t[k]])))}</script>
-<script src="${prefix}assets/js/main.js?v=${ASSET_VERSION}" defer></script>
+<script src="${prefix}assets/js/main.js?v=${ASSET_VERSION}" defer></script>${book ? `
+<link rel="stylesheet" href="${prefix}assets/css/flipbook.css?v=${ASSET_VERSION}">
+<script src="${PAGE_FLIP}" defer></script>
+<script src="${prefix}assets/js/flipbook.js?v=${ASSET_VERSION}" defer></script>` : ""}
 </head>`;
 }
 
@@ -121,9 +125,9 @@ function footer({ lang }) {
 </footer>`;
 }
 
-function page({ lang, path, altPath, title, description, theme = "dark", bodyClass = "", ogImage = "cob-exhibition", main }) {
+function page({ lang, path, altPath, title, description, theme = "dark", bodyClass = "", ogImage = "cob-exhibition", main, book = false }) {
   const prefix = prefixFor(path);
-  return `${head({ lang, title, description, prefix, path, altPath, theme, ogImage })}
+  return `${head({ lang, title, description, prefix, path, altPath, theme, ogImage, book })}
 <body class="theme-${theme} ${bodyClass}">
 ${header({ lang, prefix, altPath })}
 ${main(prefix)}
@@ -218,6 +222,9 @@ function logoTitle(p) {
 const teaser = (text) => (text.match(/[^.!?]+[.!?]+/g) || [text]).slice(0, 2).join(" ").trim();
 
 function block(prefix, b, lang) {
+  if (b.type === "book") {
+    return `<div class="block block-book">${bookHTML({ b, lang, t: ui[lang], assets: prefix + "assets/" })}</div>`;
+  }
   if (b.type === "text") {
     return `<section class="block block-text">
       ${b.kicker ? `<p class="text-kicker">${esc(b.kicker[lang])}</p>` : ""}
@@ -297,6 +304,7 @@ for (const lang of LANGS) {
         theme: p.theme,
         ogImage: p.cover,
         main: projectMain(lang, p, i),
+        book: hasBook(p),
       })
     );
   });

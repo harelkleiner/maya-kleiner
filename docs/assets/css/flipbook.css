@@ -1,0 +1,46 @@
+/* Flip-book (shared by both site designs). Colours follow the page's --fg / --muted / --accent. */
+
+.book { width: 100%; max-width: 1200px; margin: 0 auto; }
+.book-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-block-end: 1.5rem; }
+.book-title { margin: 0; font-size: clamp(1.25rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: .02em; }
+.book-hint { margin: 0; font-size: .8125rem; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+:lang(he) .book-hint { letter-spacing: .02em; }
+
+.book-stage {
+  position: relative;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  border-radius: 10px;
+  background: radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0) 70%);
+}
+.book-stage:focus-visible { outline: 2px solid var(--accent, currentColor); outline-offset: 4px; }
+
+/* Before the book engine loads (or without it): a swipeable row of pages. */
+.book-pages { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-block-end: .5rem; }
+.book-page { flex: none; width: min(70vw, 360px); scroll-snap-align: center; background: #fff; }
+.book-page img { display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+
+/* Once StPageFlip runs, it positions the pages itself. */
+/* Keep a two-page spread within ~68% of the window height. */
+.book.is-ready .book-pages { display: block; overflow: visible; padding: 0; margin: 0 auto; max-width: min(100%, calc(var(--ratio, .62) * 2 * 68vh)); }
+@media (max-width: 700px) { .book.is-ready .book-pages { max-width: min(100%, calc(var(--ratio, .62) * 68vh)); } }
+.book.is-ready .book-page { width: auto; box-shadow: none; }
+.book.is-ready .book-page:not(.is-cover) { box-shadow: inset -6px 0 18px -10px rgba(0, 0, 0, .25); }
+.book.is-ready .stf__parent { margin: 0 auto; }
+
+.book-controls {
+  display: none;
+  justify-content: center; align-items: center; gap: 1.25rem;
+  margin-block-start: 1.25rem;
+}
+.book.is-ready .book-controls { display: flex; }
+.book-btn {
+  display: grid; place-items: center;
+  width: 3rem; height: 3rem; border-radius: 50%;
+  border: 1px solid currentColor; background: transparent; color: inherit;
+  font-size: 1.15rem; cursor: pointer;
+  transition: background-color .25s, color .25s, opacity .25s;
+}
+.book-btn:hover:not(:disabled), .book-btn:focus-visible { background: var(--accent, currentColor); border-color: var(--accent, currentColor); color: #000; }
+.book-btn:disabled { opacity: .3; cursor: default; }
+.book-status { margin: 0; min-width: 11rem; text-align: center; font-size: .875rem; letter-spacing: .08em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+:lang(he) .book-status { letter-spacing: .02em; }
